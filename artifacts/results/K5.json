@@ -1,0 +1,97 @@
+{
+ "qid": "K5",
+ "category": "keyword trap",
+ "query": "What happens to the money collected from fines imposed by the Board?",
+ "gold": [
+  74
+ ],
+ "expected": "s.34: credited to the Consolidated Fund of India.",
+ "candidates": [
+  {
+   "chunk_id": 73,
+   "bi_rank": 3,
+   "bi_score": 0.502427339553833,
+   "ce_score": 1.0593262910842896,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 72,
+   "bi_rank": 1,
+   "bi_score": 0.5352939367294312,
+   "ce_score": 0.5930216312408447,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 74,
+   "bi_rank": 2,
+   "bi_score": 0.5029452443122864,
+   "ce_score": 0.47397440671920776,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 91,
+   "bi_rank": 4,
+   "bi_score": 0.45856380462646484,
+   "ce_score": -0.12219704687595367,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 90,
+   "bi_rank": 6,
+   "bi_score": 0.42659664154052734,
+   "ce_score": -2.5132274627685547,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 77,
+   "bi_rank": 5,
+   "bi_score": 0.43155360221862793,
+   "ce_score": -2.615567207336426,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 58,
+   "bi_rank": 9,
+   "bi_score": 0.33848121762275696,
+   "ce_score": -6.544820308685303,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 59,
+   "bi_rank": 7,
+   "bi_score": 0.409129798412323,
+   "ce_score": -6.681859016418457,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 54,
+   "bi_rank": 10,
+   "bi_score": 0.33349281549453735,
+   "ce_score": -9.673445701599121,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 11,
+   "bi_rank": 8,
+   "bi_score": 0.3521062135696411,
+   "ce_score": -10.973478317260742,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  72,
+  74,
+  73
+ ],
+ "rr_top": [
+  73,
+  72,
+  74
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter VIII (Penalties And Adjudication) - Section 33: Penalties\n33. (1) If the Board determines on conclusion of an inquiry that breach of the provisions of this Act or the rules made thereunder by a person is significant, it may, after giving the person an opportunity of being heard, impose such monetary penalty specified in the Schedule.\n\n[2] Chapter VIII (Penalties And Adjudication) - Section 34: Crediting sums realised by way of penalties to Consolidated Fund of India\n34. All sums realised by way of penalties imposed by the Board under this Act, shall be credited to the Consolidated Fund of India.\n\n[3] Chapter VIII (Penalties And Adjudication) - Section 33: Penalties\n(2) While determining the amount of monetary penalty to be imposed under sub-section (1), the Board shall have regard to the following matters, namely:— (a) the nature, gravity and duration of the breach; (b) the type and nature of the personal data affected by the breach; (c) repetitive nature of the breach; (d) whether the person, as a result of the breach, has realised a gain or avoided any loss; (e) whether the person took any action to mitigate the effects and consequences of the breach, and the timeliness and effectiveness of such action; (f) whether the monetary penalty to be imposed is proportionate and effective, having regard to the need to secure observance of and deter breach of the provisions of this Act; and (g) the likely impact of the imposition of the monetary penalty on the person.\n\nQuestion: What happens to the money collected from fines imposed by the Board?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter VIII (Penalties And Adjudication) - Section 33: Penalties\n(2) While determining the amount of monetary penalty to be imposed under sub-section (1), the Board shall have regard to the following matters, namely:— (a) the nature, gravity and duration of the breach; (b) the type and nature of the personal data affected by the breach; (c) repetitive nature of the breach; (d) whether the person, as a result of the breach, has realised a gain or avoided any loss; (e) whether the person took any action to mitigate the effects and consequences of the breach, and the timeliness and effectiveness of such action; (f) whether the monetary penalty to be imposed is proportionate and effective, having regard to the need to secure observance of and deter breach of the provisions of this Act; and (g) the likely impact of the imposition of the monetary penalty on the person.\n\n[2] Chapter VIII (Penalties And Adjudication) - Section 33: Penalties\n33. (1) If the Board determines on conclusion of an inquiry that breach of the provisions of this Act or the rules made thereunder by a person is significant, it may, after giving the person an opportunity of being heard, impose such monetary penalty specified in the Schedule.\n\n[3] Chapter VIII (Penalties And Adjudication) - Section 34: Crediting sums realised by way of penalties to Consolidated Fund of India\n34. All sums realised by way of penalties imposed by the Board under this Act, shall be credited to the Consolidated Fund of India.\n\nQuestion: What happens to the money collected from fines imposed by the Board?\nAnswer:",
+ "answer1": "According to Section 34, all sums realized by way of penalties imposed by the Board under this Act shall be credited to the Consolidated Fund of India.",
+ "llm_s1": 1.7714531999081373,
+ "answer2": "According to Section 34, all sums realized by way of penalties imposed by the Board under the Act shall be credited to the Consolidated Fund of India.",
+ "llm_s2": 1.7467359999427572
+}

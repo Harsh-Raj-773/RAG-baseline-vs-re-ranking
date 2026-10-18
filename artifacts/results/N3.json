@@ -1,0 +1,97 @@
+{
+ "qid": "N3",
+ "category": "negation",
+ "query": "What is the Board prohibited from doing when it inquires into a company?",
+ "gold": [
+  63
+ ],
+ "expected": "s.28(8): it shall not prevent access to premises or seize equipment in a way that affects day-to-day functioning.",
+ "candidates": [
+  {
+   "chunk_id": 63,
+   "bi_rank": 4,
+   "bi_score": 0.5242587924003601,
+   "ce_score": -2.19718074798584,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 62,
+   "bi_rank": 5,
+   "bi_score": 0.5178399085998535,
+   "ce_score": -3.0194406509399414,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 59,
+   "bi_rank": 2,
+   "bi_score": 0.5538846254348755,
+   "ce_score": -3.247352123260498,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 54,
+   "bi_rank": 7,
+   "bi_score": 0.4773642420768738,
+   "ce_score": -3.743898391723633,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 43,
+   "bi_rank": 10,
+   "bi_score": 0.4398428797721863,
+   "ce_score": -4.529136657714844,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 71,
+   "bi_rank": 6,
+   "bi_score": 0.4826643168926239,
+   "ce_score": -6.184439659118652,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 61,
+   "bi_rank": 1,
+   "bi_score": 0.5619423389434814,
+   "ce_score": -7.305008888244629,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 48,
+   "bi_rank": 3,
+   "bi_score": 0.5465249419212341,
+   "ce_score": -7.52895975112915,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 80,
+   "bi_rank": 8,
+   "bi_score": 0.4576897621154785,
+   "ce_score": -7.666154861450195,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 46,
+   "bi_rank": 9,
+   "bi_score": 0.44883495569229126,
+   "ce_score": -9.556842803955078,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  61,
+  59,
+  48
+ ],
+ "rr_top": [
+  63,
+  62,
+  59
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 28: Procedure to be followed by Board\n28. (1) The Board shall function as an independent body and shall, as far as practicable, function as a digital office, with the receipt of complaints and the allocation, hearing and pronouncement of decisions in respect of the same being digital by design, and adopt such techno-legal measures as may be prescribed. (2) The Board may, on receipt of an intimation or complaint or reference or directions as referred to in sub-section (1) of section 27, take action in accordance with the provisions of this Act and the rules made thereunder. (3) The Board shall determine whether there are sufficient grounds to proceed with an inquiry. (4) In case the Board determines that there are insufficient grounds, it may, for reasons to be recorded in writing, close the proceedings.\n\n[2] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 27: Powers and functions of Board\n(c) on a complaint made by a Data Principal in respect of a breach in observance by a Consent Manager of its obligations in relation to her personal data, to inquire into such breach and impose penalty as provided in this Act; (d) on receipt of an intimation of breach of any condition of registration of a Consent Manager, to inquire into such breach and impose penalty as provided in this Act; and (e) on a reference made by the Central Government in respect of the breach in observance of the provisions of sub-section (2) of section 37 by an intermediary, to inquire into such breach and impose penalty as provided in this Act. (2) The Board may, for the effective discharge of its functions under the provisions of this Act, after giving the person concerned an opportunity of being heard and after recording reasons in writing, issue such directions as it may consider necessary to such person, who shall be bound to comply with the same.\n\n[3] Chapter V (Data Protection Board Of India) - Section 18: Establishment of Board\n18. (1) With effect from such date as the Central Government may, by notification, appoint, there shall be established, for the purposes of this Act, a Board to be called the Data Protection Board of India. (2) The Board shall be a body corporate by the name aforesaid, having perpetual succession and a common seal, with power, subject to the provisions of this Act, to acquire, hold and dispose of property, both movable and immovable, and to contract and shall, by the said name, sue or be sued. (3) The headquarters of the Board shall be at such place as the Central Government may notify.\n\nQuestion: What is the Board prohibited from doing when it inquires into a company?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 28: Procedure to be followed by Board\n(8) The Board or its officers shall not prevent access to any premises or take into custody any equipment or any item that may adversely affect the day-to-day functioning of a person. (9) The Board may require the services of any police officer or any officer of the Central Government or a State Government to assist it for the purposes of this section and it shall be the duty of every such officer to comply with such requisition. (10) During the course of the inquiry, if the Board considers it necessary, it may for reasons to be recorded in writing, issue interim orders after giving the person concerned an opportunity of being heard. (11) On completion of the inquiry and after giving the person concerned an opportunity of being heard, the Board may for reasons to be recorded in writing, either close the proceedings or proceed in accordance with section 33.\n\n[2] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 28: Procedure to be followed by Board\n(5) In case the Board determines that there are sufficient grounds to proceed with inquiry, it may, for reasons to be recorded in writing, inquire into the affairs of any person for ascertaining whether such person is complying with or has complied with the provisions of this Act. (6) The Board shall conduct such inquiry following the principles of natural justice and shall record reasons for its actions during the course of such inquiry. (7) For the purposes of discharging its functions under this Act, the Board shall have the same powers as are vested in a civil court under the Code of Civil Procedure, 1908, in respect of matters relating to— (a) summoning and enforcing the attendance of any person and examining her on oath; (b) receiving evidence of affidavit requiring the discovery and production of documents; (c) inspecting any data, book, document, register, books of account or any other document; and (d) such other matters as may be prescribed.\n\n[3] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 27: Powers and functions of Board\n(c) on a complaint made by a Data Principal in respect of a breach in observance by a Consent Manager of its obligations in relation to her personal data, to inquire into such breach and impose penalty as provided in this Act; (d) on receipt of an intimation of breach of any condition of registration of a Consent Manager, to inquire into such breach and impose penalty as provided in this Act; and (e) on a reference made by the Central Government in respect of the breach in observance of the provisions of sub-section (2) of section 37 by an intermediary, to inquire into such breach and impose penalty as provided in this Act. (2) The Board may, for the effective discharge of its functions under the provisions of this Act, after giving the person concerned an opportunity of being heard and after recording reasons in writing, issue such directions as it may consider necessary to such person, who shall be bound to comply with the same.\n\nQuestion: What is the Board prohibited from doing when it inquires into a company?\nAnswer:",
+ "answer1": "The provided context does not answer this.",
+ "llm_s1": 0.7175344000570476,
+ "answer2": "The Board is prohibited from preventing access to any premises or taking into custody any equipment or item that may adversely affect the day-to-day functioning of a person during the inquiry. This is stated in Section 28(8) of the Act.",
+ "llm_s2": 2.9880298000061885
+}

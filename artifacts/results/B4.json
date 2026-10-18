@@ -1,0 +1,97 @@
+{
+ "qid": "B4",
+ "category": "buried",
+ "query": "How long is the term of a member of the Data Protection Board?",
+ "gold": [
+  50
+ ],
+ "expected": "s.20(2): two years, eligible for re-appointment.",
+ "candidates": [
+  {
+   "chunk_id": 53,
+   "bi_rank": 6,
+   "bi_score": 0.5350090861320496,
+   "ce_score": 6.464617729187012,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 54,
+   "bi_rank": 7,
+   "bi_score": 0.5197076201438904,
+   "ce_score": -0.8613754510879517,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 49,
+   "bi_rank": 4,
+   "bi_score": 0.5502350330352783,
+   "ce_score": -1.1770373582839966,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 55,
+   "bi_rank": 1,
+   "bi_score": 0.6230778694152832,
+   "ce_score": -1.7511191368103027,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 57,
+   "bi_rank": 3,
+   "bi_score": 0.5861383080482483,
+   "ce_score": -2.23129940032959,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 48,
+   "bi_rank": 2,
+   "bi_score": 0.5933037996292114,
+   "ce_score": -2.273732900619507,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 83,
+   "bi_rank": 9,
+   "bi_score": 0.5096293091773987,
+   "ce_score": -5.328064918518066,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 33,
+   "bi_rank": 5,
+   "bi_score": 0.5461082458496094,
+   "ce_score": -5.751445770263672,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 84,
+   "bi_rank": 8,
+   "bi_score": 0.5176544785499573,
+   "ce_score": -6.763831615447998,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 3,
+   "bi_rank": 10,
+   "bi_score": 0.5078115463256836,
+   "ce_score": -9.092230796813965,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  55,
+  48,
+  57
+ ],
+ "rr_top": [
+  53,
+  54,
+  49
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter V (Data Protection Board Of India) - Section 24: Officers and employees of Board\n24. The Board may, with previous approval of the Central Government, appoint such officers and employees as it may deem necessary for the efficient discharge of its functions under the provisions of this Act, on such terms and conditions of appointment and service as may be prescribed.\n\n[2] Chapter V (Data Protection Board Of India) - Section 18: Establishment of Board\n18. (1) With effect from such date as the Central Government may, by notification, appoint, there shall be established, for the purposes of this Act, a Board to be called the Data Protection Board of India. (2) The Board shall be a body corporate by the name aforesaid, having perpetual succession and a common seal, with power, subject to the provisions of this Act, to acquire, hold and dispose of property, both movable and immovable, and to contract and shall, by the said name, sue or be sued. (3) The headquarters of the Board shall be at such place as the Central Government may notify.\n\n[3] Chapter V (Data Protection Board Of India) - Section 26: Powers of Chairperson\n26. The Chairperson shall exercise the following powers, namely:— (a) general superintendence and giving direction in respect of all administrative matters of the Board; (b) authorise any officer of the Board to scrutinise any intimation, complaint, reference or correspondence addressed to the Board; and (c) authorise performance of any of the functions of the Board and conduct any of its proceedings, by an individual Member or groups of Members and to allocate proceedings among them.\n\nQuestion: How long is the term of a member of the Data Protection Board?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter V (Data Protection Board Of India) - Section 22: Resignation by Members and filling of vacancy\n(3) The Chairperson and any other Member shall not, for a period of one year from the date on which they cease to hold such office, except with the previous approval of the Central Government, accept any employment, and shall also disclose to the Central Government any subsequent acceptance of employment with any Data Fiduciary against whom proceedings were initiated by or before such Chairperson or other Member.\n\n[2] Chapter V (Data Protection Board Of India) - Section 23: Proceedings of Board\n23. (1) The Board shall observe such procedure in regard to the holding of and transaction of business at its meetings, including by digital means, and authenticate its orders, directions and instruments in such manner as may be prescribed. (2) No act or proceeding of the Board shall be invalid merely by reason of— (a) any vacancy in or any defect in the constitution of the Board; (b) any defect in the appointment of a person acting as the Chairperson or other Member of the Board; or (c) any irregularity in the procedure of the Board, which does not affect the merits of the case. (3) When the Chairperson is unable to discharge her functions owing to absence, illness or any other cause, the senior-most Member shall discharge the functions of the Chairperson until the date on which the Chairperson resumes her duties.\n\n[3] Chapter V (Data Protection Board Of India) - Section 19: Composition and qualifications for appointment of Chairperson and Members\n19. (1) The Board shall consist of a Chairperson and such number of other Members as the Central Government may notify. (2) The Chairperson and other Members shall be appointed by the Central Government in such manner as may be prescribed. (3) The Chairperson and other Members shall be a person of ability, integrity and standing who possesses special knowledge or practical experience in the fields of data governance, administration or implementation of laws related to social or consumer protection, dispute resolution, information and communication technology, digital economy, law, regulation or techno-regulation, or in any other field which in the opinion of the Central Government may be useful to the Board, and at least one among them shall be an expert in the field of law.\n\nQuestion: How long is the term of a member of the Data Protection Board?\nAnswer:",
+ "answer1": "The provided context does not answer this.",
+ "llm_s1": 0.6310552000068128,
+ "answer2": "The provided context does not explicitly state the term length of a member of the Data Protection Board.",
+ "llm_s2": 1.2411720999516547
+}

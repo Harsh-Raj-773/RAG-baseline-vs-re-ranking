@@ -1,0 +1,97 @@
+{
+ "qid": "B3",
+ "category": "buried",
+ "query": "Who can exercise my data rights if I die?",
+ "gold": [
+  39
+ ],
+ "expected": "s.14: an individual the Data Principal has nominated.",
+ "candidates": [
+  {
+   "chunk_id": 40,
+   "bi_rank": 4,
+   "bi_score": 0.5323617458343506,
+   "ce_score": -2.921792507171631,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 28,
+   "bi_rank": 9,
+   "bi_score": 0.5047868490219116,
+   "ce_score": -3.0245118141174316,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 11,
+   "bi_rank": 8,
+   "bi_score": 0.5053225755691528,
+   "ce_score": -3.63846492767334,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 35,
+   "bi_rank": 2,
+   "bi_score": 0.5442528128623962,
+   "ce_score": -6.4046735763549805,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 37,
+   "bi_rank": 7,
+   "bi_score": 0.5062322616577148,
+   "ce_score": -6.417232036590576,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 17,
+   "bi_rank": 3,
+   "bi_score": 0.539399266242981,
+   "ce_score": -7.450512409210205,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 36,
+   "bi_rank": 1,
+   "bi_score": 0.5541287660598755,
+   "ce_score": -7.462951183319092,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 26,
+   "bi_rank": 5,
+   "bi_score": 0.519594132900238,
+   "ce_score": -8.325124740600586,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 21,
+   "bi_rank": 6,
+   "bi_score": 0.5092362761497498,
+   "ce_score": -9.385747909545898,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 22,
+   "bi_rank": 10,
+   "bi_score": 0.5025505423545837,
+   "ce_score": -9.781084060668945,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  36,
+  35,
+  17
+ ],
+ "rr_top": [
+  40,
+  28,
+  11
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter III (Rights And Duties Of Data Principal) - Section 11: Right to access information about personal data\n(2) Nothing contained in clause (b) or clause (c) of sub-section (1) shall apply in respect of the sharing of any personal data by the said Data Fiduciary with any other Data Fiduciary authorised by law to obtain such personal data, where such sharing is pursuant to a request made in writing by such other Data Fiduciary for the purpose of prevention or detection or investigation of offences or cyber incidents, or for prosecution or punishment of offences.\n\n[2] Chapter III (Rights And Duties Of Data Principal) - Section 11: Right to access information about personal data\n11. (1) The Data Principal shall have the right to obtain from the Data Fiduciary to whom she has previously given consent, including consent as referred to in clause (a) of section 7 (hereinafter referred to as the said Data Fiduciary), for processing of personal data, upon making to it a request in such manner as may be prescribed,— (a) a summary of personal data which is being processed by such Data Fiduciary and the processing activities undertaken by that Data Fiduciary with respect to such personal data; (b) the identities of all other Data Fiduciaries and Data Processors with whom the personal data has been shared by such Data Fiduciary, along with a description of the personal data so shared; and (c) any other information related to the personal data of such Data Principal and its processing, as may be prescribed.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 6: Consent\n(6) If a Data Principal withdraws her consent to the processing of personal data under sub-section (5), the Data Fiduciary shall, within a reasonable time, cease and cause its Data Processors to cease processing the personal data of such Data Principal unless such processing without her consent is required or authorised under the provisions of this Act or the rules made thereunder or any other law for the time being in force in India. Illustration. X, a telecom service provider, enters into a contract with Y, a Data Processor, for emailing telephone bills to the customers of X. Z, a customer of X, who had earlier given her consent to X for the processing of her personal data for emailing of bills, downloads the mobile app of X and opts to receive bills only on the app. X shall itself cease, and shall cause Y to cease, the processing of the personal data of Z for emailing bills.\n\nQuestion: Who can exercise my data rights if I die?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter III (Rights And Duties Of Data Principal) - Section 15: Duties of Data Principal\n15. A Data Principal shall perform the following duties, namely:— (a) comply with the provisions of all applicable laws for the time being in force while exercising rights under the provisions of this Act; (b) to ensure not to impersonate another person while providing her personal data for a specified purpose; (c) to ensure not to suppress any material information while providing her personal data for any document, unique identifier, proof of identity or proof of address issued by the State or any of its instrumentalities; (d) to ensure not to register a false or frivolous grievance or complaint with a Data Fiduciary or the Board; and (e) to furnish only such information as is verifiably authentic, while exercising the right to correction or erasure under the provisions of this Act or the rules made thereunder.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(8) The purpose referred to in clause (a) of sub-section (7) shall be deemed to no longer be served, if the Data Principal does not–– (a) approach the Data Fiduciary for the performance of the specified purpose; and (b) exercise any of her rights in relation to such processing, for such time period as may be prescribed, and different time periods may be prescribed for different classes of Data Fiduciaries and for different purposes. (9) A Data Fiduciary shall publish, in such manner as may be prescribed, the business contact information of a Data Protection Officer, if applicable, or a person who is able to answer on behalf of the Data Fiduciary, the questions, if any, raised by the Data Principal about the processing of her personal data. (10) A Data Fiduciary shall establish an effective mechanism to redress the grievances of Data Principals.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 5: Notice\n(2) Where a Data Principal has given her consent for the processing of her personal data before the date of commencement of this Act,— (a) the Data Fiduciary shall, as soon as it is reasonably practicable, give to the Data Principal a notice informing her,–– (i) the personal data and the purpose for which the same has been processed; (ii) the manner in which she may exercise her rights under sub-section (4) of section 6 and section 13; and (iii) the manner in which the Data Principal may make a complaint to the Board, in such manner and as may be prescribed.\n\nQuestion: Who can exercise my data rights if I die?\nAnswer:",
+ "answer1": "The provided context does not answer this.",
+ "llm_s1": 0.6921708999434486,
+ "answer2": "The provided context does not answer this.",
+ "llm_s2": 0.7211007999721915
+}

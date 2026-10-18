@@ -1,0 +1,5 @@
+corpus size (chunks),"cross-encode everything, GPU","cross-encode everything, CPU","two-stage (bi-encoder + CE on 10), GPU"
+92,0.16 s,1.56 s,~27 ms + ANN search
+"10,000",17.17 s,2.8 min,~27 ms + ANN search
+"1,000,000",28.6 min,4.7 h,~27 ms + ANN search
+"100,000,000",2.0 days,19.7 days,~27 ms + ANN search

@@ -1,0 +1,97 @@
+{
+ "qid": "K6",
+ "category": "keyword trap",
+ "query": "From what age is a person no longer treated as a child under the Act?",
+ "gold": [
+  2
+ ],
+ "expected": "s.2(f): a child is an individual who has not completed eighteen years.",
+ "candidates": [
+  {
+   "chunk_id": 2,
+   "bi_rank": 7,
+   "bi_score": 0.32092905044555664,
+   "ce_score": -4.984842777252197,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 47,
+   "bi_rank": 2,
+   "bi_score": 0.3717555105686188,
+   "ce_score": -8.773097038269043,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 31,
+   "bi_rank": 1,
+   "bi_score": 0.38314181566238403,
+   "ce_score": -9.02518081665039,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 30,
+   "bi_rank": 6,
+   "bi_score": 0.3311997950077057,
+   "ce_score": -9.089305877685547,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 71,
+   "bi_rank": 8,
+   "bi_score": 0.3131457567214966,
+   "ce_score": -9.528366088867188,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 70,
+   "bi_rank": 10,
+   "bi_score": 0.2995392084121704,
+   "ce_score": -9.552330017089844,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 51,
+   "bi_rank": 9,
+   "bi_score": 0.3038327693939209,
+   "ce_score": -10.114913940429688,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 62,
+   "bi_rank": 5,
+   "bi_score": 0.3337032198905945,
+   "ce_score": -10.158093452453613,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 56,
+   "bi_rank": 4,
+   "bi_score": 0.35330986976623535,
+   "ce_score": -10.391721725463867,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 39,
+   "bi_rank": 3,
+   "bi_score": 0.36742711067199707,
+   "ce_score": -10.67172908782959,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  31,
+  47,
+  39
+ ],
+ "rr_top": [
+  2,
+  47,
+  31
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter II (Obligations Of Data Fiduciary) - Section 9: Processing of personal data of children\n(5) The Central Government may, if satisfied that a Data Fiduciary has ensured that its processing of personal data of children is done in a manner that is verifiably safe, notify for such processing by such Data Fiduciary the age above which that Data Fiduciary shall be exempt from the applicability of all or any of the obligations under sub-sections (1) and (3) in respect of processing by that Data Fiduciary as the notification may specify.\n\n[2] Chapter IV (Special Provisions) - Section 17: Exemptions\n(5) The Central Government may, before expiry of five years from the date of commencement of this Act, by notification, declare that any provision of this Act shall not apply to such Data Fiduciary or classes of Data Fiduciaries for such period as may be specified in the notification.\n\n[3] Chapter III (Rights And Duties Of Data Principal) - Section 14: Right to nominate\n14. (1) A Data Principal shall have the right to nominate, in such manner as may be prescribed, any other individual, who shall, in the event of death or incapacity of the Data Principal, exercise the rights of the Data Principal in accordance with the provisions of this Act and the rules made thereunder. (2) For the purposes of this section, the expression “incapacity” means inability to exercise the rights of the Data Principal under the provisions of this Act or the rules made thereunder due to unsoundness of mind or infirmity of body.\n\nQuestion: From what age is a person no longer treated as a child under the Act?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter I (Preliminary) - Section 2: Definitions\n2. In this Act, unless the context otherwise requires,— (a) “Appellate Tribunal” means the Telecom Disputes Settlement and Appellate Tribunal established under section 14 of the Telecom Regulatory Authority of India Act, 1997; (b) “automated” means any digital process capable of operating automatically in response to instructions given or otherwise for the purpose of processing data; (c) “Board” means the Data Protection Board of India established by the Central Government under section 18; (d) “certain legitimate uses” means the uses referred to in section 7; (e) “Chairperson” means the Chairperson of the Board; (f) “child” means an individual who has not completed the age of eighteen years; (g) “Consent Manager” means a person registered with the Board, who acts as a single point of contact to enable a Data Principal to give, manage, review and withdraw her consent through an accessible, transparent and interoperable platform;\n\n[2] Chapter IV (Special Provisions) - Section 17: Exemptions\n(5) The Central Government may, before expiry of five years from the date of commencement of this Act, by notification, declare that any provision of this Act shall not apply to such Data Fiduciary or classes of Data Fiduciaries for such period as may be specified in the notification.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 9: Processing of personal data of children\n(5) The Central Government may, if satisfied that a Data Fiduciary has ensured that its processing of personal data of children is done in a manner that is verifiably safe, notify for such processing by such Data Fiduciary the age above which that Data Fiduciary shall be exempt from the applicability of all or any of the obligations under sub-sections (1) and (3) in respect of processing by that Data Fiduciary as the notification may specify.\n\nQuestion: From what age is a person no longer treated as a child under the Act?\nAnswer:",
+ "answer1": "The provided context does not explicitly state from what age a person is no longer treated as a child under the Act. It only mentions that the Central Government can notify an age above which a Data Fiduciary would be exempt from certain obligations regarding the processing of personal data of children.",
+ "llm_s1": 3.037168800015934,
+ "answer2": "According to Section 9 of Chapter II (Obligations Of Data Fiduciary), the Central Government may notify for processing by a Data Fiduciary the age above which that Data Fiduciary shall be exempt from the applicability of all or any of the obligations under sub-sections (1) and (3) in respect of processing by that Data Fiduciary as the notification may specify. This implies that there is no specific age mentioned as the cutoff for being considered a child, but rather it is determined based on the notification issued by the Central Government. The provided context does not explicitly state the age cutoff for ceasing to be considered a child.",
+ "llm_s2": 7.293115800013766
+}

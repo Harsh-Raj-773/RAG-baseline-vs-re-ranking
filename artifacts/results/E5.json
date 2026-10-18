@@ -1,0 +1,97 @@
+{
+ "qid": "E5",
+ "category": "exception",
+ "query": "Can an appeal still be heard if it is filed after sixty days?",
+ "gold": [
+  65
+ ],
+ "expected": "s.29(3): yes, if the Appellate Tribunal is satisfied there was sufficient cause for the delay.",
+ "candidates": [
+  {
+   "chunk_id": 65,
+   "bi_rank": 1,
+   "bi_score": 0.6844232082366943,
+   "ce_score": 6.181968688964844,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 66,
+   "bi_rank": 2,
+   "bi_score": 0.5397805571556091,
+   "ce_score": -1.4613943099975586,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 67,
+   "bi_rank": 3,
+   "bi_score": 0.45419377088546753,
+   "ce_score": -5.588768005371094,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 86,
+   "bi_rank": 5,
+   "bi_score": 0.380742609500885,
+   "ce_score": -8.658834457397461,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 69,
+   "bi_rank": 6,
+   "bi_score": 0.36922645568847656,
+   "ce_score": -9.252248764038086,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 72,
+   "bi_rank": 8,
+   "bi_score": 0.3491745889186859,
+   "ce_score": -10.253044128417969,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 70,
+   "bi_rank": 10,
+   "bi_score": 0.31555500626564026,
+   "ce_score": -10.295124053955078,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 68,
+   "bi_rank": 4,
+   "bi_score": 0.4271602928638458,
+   "ce_score": -10.396875381469727,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 85,
+   "bi_rank": 7,
+   "bi_score": 0.3502311408519745,
+   "ce_score": -10.405579566955566,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 47,
+   "bi_rank": 9,
+   "bi_score": 0.33923065662384033,
+   "ce_score": -11.085147857666016,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  65,
+  66,
+  67
+ ],
+ "rr_top": [
+  65,
+  66,
+  67
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter VII (Appeal And Alternate Dispute Resolution) - Section 29: Appeal to Appellate Tribunal\n29. (1) Any person aggrieved by an order or direction made by the Board under this Act may prefer an appeal before the Appellate Tribunal. (2) Every appeal under sub-section (1) shall be filed within a period of sixty days from the date of receipt of the order or direction appealed against and it shall be in such form and manner and shall be accompanied by such fee as may be prescribed. (3) The Appellate Tribunal may entertain an appeal after the expiry of the period specified in sub-section (2), if it is satisfied that there was sufficient cause for not preferring the appeal within that period. (4) On receipt of an appeal under sub-section (1), the Appellate Tribunal may, after giving the parties to the appeal, an opportunity of being heard, pass such orders thereon as it thinks fit, confirming, modifying or setting aside the order appealed against.\n\n[2] Chapter VII (Appeal And Alternate Dispute Resolution) - Section 29: Appeal to Appellate Tribunal\n(5) The Appellate Tribunal shall send a copy of every order made by it to the Board and to the parties to the appeal. (6) The appeal filed before the Appellate Tribunal under sub-section (1) shall be dealt with by it as expeditiously as possible and endeavour shall be made by it to dispose of the appeal finally within six months from the date on which the appeal is presented to it. (7) Where any appeal under sub-section (6) could not be disposed of within the period of six months, the Appellate Tribunal shall record its reasons in writing for not disposing of the appeal within that period. (8) Without prejudice to the provisions of section 14A and section 16 of the Telecom Regulatory Authority of India Act, 1997, the Appellate Tribunal shall deal with an appeal under this section in accordance with such procedure as may be prescribed.\n\n[3] Chapter VII (Appeal And Alternate Dispute Resolution) - Section 29: Appeal to Appellate Tribunal\n(9) Where an appeal is filed against the orders of the Appellate Tribunal under this Act, the provisions of section 18 of the Telecom Regulatory Authority of India Act, 1997 shall apply. (10) In respect of appeals filed under the provisions of this Act, the Appellate Tribunal shall, as far as practicable, function as a digital office, with the receipt of appeal, hearing and pronouncement of decisions in respect of the same being digital by design.\n\nQuestion: Can an appeal still be heard if it is filed after sixty days?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter VII (Appeal And Alternate Dispute Resolution) - Section 29: Appeal to Appellate Tribunal\n29. (1) Any person aggrieved by an order or direction made by the Board under this Act may prefer an appeal before the Appellate Tribunal. (2) Every appeal under sub-section (1) shall be filed within a period of sixty days from the date of receipt of the order or direction appealed against and it shall be in such form and manner and shall be accompanied by such fee as may be prescribed. (3) The Appellate Tribunal may entertain an appeal after the expiry of the period specified in sub-section (2), if it is satisfied that there was sufficient cause for not preferring the appeal within that period. (4) On receipt of an appeal under sub-section (1), the Appellate Tribunal may, after giving the parties to the appeal, an opportunity of being heard, pass such orders thereon as it thinks fit, confirming, modifying or setting aside the order appealed against.\n\n[2] Chapter VII (Appeal And Alternate Dispute Resolution) - Section 29: Appeal to Appellate Tribunal\n(5) The Appellate Tribunal shall send a copy of every order made by it to the Board and to the parties to the appeal. (6) The appeal filed before the Appellate Tribunal under sub-section (1) shall be dealt with by it as expeditiously as possible and endeavour shall be made by it to dispose of the appeal finally within six months from the date on which the appeal is presented to it. (7) Where any appeal under sub-section (6) could not be disposed of within the period of six months, the Appellate Tribunal shall record its reasons in writing for not disposing of the appeal within that period. (8) Without prejudice to the provisions of section 14A and section 16 of the Telecom Regulatory Authority of India Act, 1997, the Appellate Tribunal shall deal with an appeal under this section in accordance with such procedure as may be prescribed.\n\n[3] Chapter VII (Appeal And Alternate Dispute Resolution) - Section 29: Appeal to Appellate Tribunal\n(9) Where an appeal is filed against the orders of the Appellate Tribunal under this Act, the provisions of section 18 of the Telecom Regulatory Authority of India Act, 1997 shall apply. (10) In respect of appeals filed under the provisions of this Act, the Appellate Tribunal shall, as far as practicable, function as a digital office, with the receipt of appeal, hearing and pronouncement of decisions in respect of the same being digital by design.\n\nQuestion: Can an appeal still be heard if it is filed after sixty days?\nAnswer:",
+ "answer1": "Yes, an appeal can still be heard after sixty days if the Appellate Tribunal is satisfied that there was sufficient cause for not preferring the appeal within that period. This is stated in Section 29(3) of the Act.",
+ "llm_s1": 2.7970116999931633,
+ "answer2": "Yes, an appeal can still be heard after sixty days if the Appellate Tribunal is satisfied that there was sufficient cause for not preferring the appeal within that period. This is stated in Section 29(3) of the Act.",
+ "llm_s2": 2.7970116999931633
+}

@@ -1,0 +1,97 @@
+{
+ "qid": "N1",
+ "category": "negation",
+ "query": "What is a company not allowed to do with children's personal data?",
+ "gold": [
+  30
+ ],
+ "expected": "s.9(2)-(3): nothing detrimental to a child's well-being; no tracking/behavioural monitoring; no targeted advertising at children.",
+ "candidates": [
+  {
+   "chunk_id": 30,
+   "bi_rank": 1,
+   "bi_score": 0.645530104637146,
+   "ce_score": 2.957834243774414,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 31,
+   "bi_rank": 2,
+   "bi_score": 0.6275252103805542,
+   "ce_score": 2.0861563682556152,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 20,
+   "bi_rank": 10,
+   "bi_score": 0.5064201354980469,
+   "ce_score": -1.1853506565093994,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 9,
+   "bi_rank": 7,
+   "bi_score": 0.516119122505188,
+   "ce_score": -2.6295342445373535,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 36,
+   "bi_rank": 4,
+   "bi_score": 0.5553973317146301,
+   "ce_score": -3.1448721885681152,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 22,
+   "bi_rank": 3,
+   "bi_score": 0.5889348387718201,
+   "ce_score": -3.751030206680298,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 8,
+   "bi_rank": 8,
+   "bi_score": 0.5141042470932007,
+   "ce_score": -3.7823879718780518,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 3,
+   "bi_rank": 9,
+   "bi_score": 0.5094681978225708,
+   "ce_score": -4.1524553298950195,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 40,
+   "bi_rank": 5,
+   "bi_score": 0.5282378792762756,
+   "ce_score": -4.475234031677246,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 21,
+   "bi_rank": 6,
+   "bi_score": 0.5271008610725403,
+   "ce_score": -5.407460689544678,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  30,
+  31,
+  22
+ ],
+ "rr_top": [
+  30,
+  31,
+  20
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter II (Obligations Of Data Fiduciary) - Section 9: Processing of personal data of children\n9. (1) The Data Fiduciary shall, before processing any personal data of a child or a person with disability who has a lawful guardian obtain verifiable consent of the parent of such child or the lawful guardian, as the case may be, in such manner as may be prescribed. Explanation.—For the purpose of this sub-section, the expression “consent of the parent” includes the consent of lawful guardian, wherever applicable. (2) A Data Fiduciary shall not undertake such processing of personal data that is likely to cause any detrimental effect on the well-being of a child. (3) A Data Fiduciary shall not undertake tracking or behavioural monitoring of children or targeted advertising directed at children. (4) The provisions of sub-sections (1) and (3) shall not be applicable to processing of personal data of a child by such classes of Data Fiduciaries or for such purposes, and subject to such conditions, as may be prescribed.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 9: Processing of personal data of children\n(5) The Central Government may, if satisfied that a Data Fiduciary has ensured that its processing of personal data of children is done in a manner that is verifiably safe, notify for such processing by such Data Fiduciary the age above which that Data Fiduciary shall be exempt from the applicability of all or any of the obligations under sub-sections (1) and (3) in respect of processing by that Data Fiduciary as the notification may specify.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 7: Certain legitimate uses\n(ii) such personal data is available in digital form in, or in non-digital form and digitised subsequently from, any database, register, book or other document which is maintained by the State or any of its instrumentalities and is notified by the Central Government, subject to standards followed for processing being in accordance with the policy issued by the Central Government or any law for the time being in force for governance of personal data. Illustration. X. a pregnant woman, enrols herself on an app or website to avail of government’s maternity benefits programme, while consenting to provide her personal data for the purpose of availing of such benefits. Government may process the personal data of X processing to determine her eligibility to receive any other prescribed benefit from the government;\n\nQuestion: What is a company not allowed to do with children's personal data?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter II (Obligations Of Data Fiduciary) - Section 9: Processing of personal data of children\n9. (1) The Data Fiduciary shall, before processing any personal data of a child or a person with disability who has a lawful guardian obtain verifiable consent of the parent of such child or the lawful guardian, as the case may be, in such manner as may be prescribed. Explanation.—For the purpose of this sub-section, the expression “consent of the parent” includes the consent of lawful guardian, wherever applicable. (2) A Data Fiduciary shall not undertake such processing of personal data that is likely to cause any detrimental effect on the well-being of a child. (3) A Data Fiduciary shall not undertake tracking or behavioural monitoring of children or targeted advertising directed at children. (4) The provisions of sub-sections (1) and (3) shall not be applicable to processing of personal data of a child by such classes of Data Fiduciaries or for such purposes, and subject to such conditions, as may be prescribed.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 9: Processing of personal data of children\n(5) The Central Government may, if satisfied that a Data Fiduciary has ensured that its processing of personal data of children is done in a manner that is verifiably safe, notify for such processing by such Data Fiduciary the age above which that Data Fiduciary shall be exempt from the applicability of all or any of the obligations under sub-sections (1) and (3) in respect of processing by that Data Fiduciary as the notification may specify.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 7: Certain legitimate uses\n(a) for the specified purpose for which the Data Principal has voluntarily provided her personal data to the Data Fiduciary, and in respect of which she has not indicated to the Data Fiduciary that she does not consent to the use of her personal data. Illustrations. (I) X, an individual, makes a purchase at Y, a pharmacy. She voluntarily provides Y her personal data and requests Y to acknowledge receipt of the payment made for the purchase by sending a message to her mobile phone. Y may process the personal data of X for the purpose of sending the receipt. (II) X, an individual, electronically messages Y, a real estate broker, requesting Y to help identify a suitable rented accommodation for her and shares her personal data for this purpose. Y may process her personal data to identify and intimate to her the details of accommodation available on rent. Subsequently, X informs Y that X no longer needs help from Y. Y shall cease to process the personal data of X;\n\nQuestion: What is a company not allowed to do with children's personal data?\nAnswer:",
+ "answer1": "A company, or Data Fiduciary, is not allowed to track or conduct targeted advertising towards children with their personal data, according to Section 9(3) of the Act. Additionally, they must not process personal data of children unless they have obtained verifiable consent from the child's parent or lawful guardian, as per Section 9(1).",
+ "llm_s1": 4.277347700088285,
+ "answer2": "A company is not allowed to track or monitor the behavior of children or to target advertisements towards them according to Section 9(3).",
+ "llm_s2": 1.719956999993883
+}

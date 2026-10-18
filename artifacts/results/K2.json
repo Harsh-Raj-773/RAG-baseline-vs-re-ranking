@@ -1,0 +1,97 @@
+{
+ "qid": "K2",
+ "category": "keyword trap",
+ "query": "If I post my own personal details publicly on my blog, does this law protect that data?",
+ "gold": [
+  8
+ ],
+ "expected": "No. s.3(c)(ii): the Act does not apply to data the Data Principal herself made publicly available.",
+ "candidates": [
+  {
+   "chunk_id": 8,
+   "bi_rank": 1,
+   "bi_score": 0.6135555505752563,
+   "ce_score": 1.6701430082321167,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 26,
+   "bi_rank": 3,
+   "bi_score": 0.4541774392127991,
+   "ce_score": -2.6076817512512207,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 36,
+   "bi_rank": 2,
+   "bi_score": 0.5242304801940918,
+   "ce_score": -3.4354324340820312,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 22,
+   "bi_rank": 7,
+   "bi_score": 0.4355430603027344,
+   "ce_score": -5.392038822174072,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 45,
+   "bi_rank": 5,
+   "bi_score": 0.44576597213745117,
+   "ce_score": -5.451733589172363,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 35,
+   "bi_rank": 6,
+   "bi_score": 0.4439852833747864,
+   "ce_score": -7.041136741638184,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 40,
+   "bi_rank": 4,
+   "bi_score": 0.44842320680618286,
+   "ce_score": -7.33643102645874,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 42,
+   "bi_rank": 10,
+   "bi_score": 0.4259842038154602,
+   "ce_score": -7.686637878417969,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 30,
+   "bi_rank": 9,
+   "bi_score": 0.43224939703941345,
+   "ce_score": -8.294540405273438,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 82,
+   "bi_rank": 8,
+   "bi_score": 0.43449366092681885,
+   "ce_score": -10.793656349182129,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  8,
+  36,
+  26
+ ],
+ "rr_top": [
+  8,
+  26,
+  36
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter I (Preliminary) - Section 3: Application of Act\n(ii) personal data that is made or caused to be made publicly available by— (A) the Data Principal to whom such personal data relates; or (B) any other person who is under an obligation under any law for the time being in force in India to make such personal data publicly available. Illustration. X, an individual, while blogging her views, has publicly made available her personal data on social media. In such case, the provisions of this Act shall not apply.\n\n[2] Chapter III (Rights And Duties Of Data Principal) - Section 11: Right to access information about personal data\n(2) Nothing contained in clause (b) or clause (c) of sub-section (1) shall apply in respect of the sharing of any personal data by the said Data Fiduciary with any other Data Fiduciary authorised by law to obtain such personal data, where such sharing is pursuant to a request made in writing by such other Data Fiduciary for the purpose of prevention or detection or investigation of offences or cyber incidents, or for prosecution or punishment of offences.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(5) A Data Fiduciary shall protect personal data in its possession or under its control, including in respect of any processing undertaken by it or on its behalf by a Data Processor, by taking reasonable security safeguards to prevent personal data breach. (6) In the event of a personal data breach, the Data Fiduciary shall give the Board and each affected Data Principal, intimation of such breach in such form and manner as may be prescribed. (7) A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— (a) erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and\n\nQuestion: If I post my own personal details publicly on my blog, does this law protect that data?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter I (Preliminary) - Section 3: Application of Act\n(ii) personal data that is made or caused to be made publicly available by— (A) the Data Principal to whom such personal data relates; or (B) any other person who is under an obligation under any law for the time being in force in India to make such personal data publicly available. Illustration. X, an individual, while blogging her views, has publicly made available her personal data on social media. In such case, the provisions of this Act shall not apply.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(5) A Data Fiduciary shall protect personal data in its possession or under its control, including in respect of any processing undertaken by it or on its behalf by a Data Processor, by taking reasonable security safeguards to prevent personal data breach. (6) In the event of a personal data breach, the Data Fiduciary shall give the Board and each affected Data Principal, intimation of such breach in such form and manner as may be prescribed. (7) A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— (a) erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and\n\n[3] Chapter III (Rights And Duties Of Data Principal) - Section 11: Right to access information about personal data\n(2) Nothing contained in clause (b) or clause (c) of sub-section (1) shall apply in respect of the sharing of any personal data by the said Data Fiduciary with any other Data Fiduciary authorised by law to obtain such personal data, where such sharing is pursuant to a request made in writing by such other Data Fiduciary for the purpose of prevention or detection or investigation of offences or cyber incidents, or for prosecution or punishment of offences.\n\nQuestion: If I post my own personal details publicly on my blog, does this law protect that data?\nAnswer:",
+ "answer1": "No, according to Section 3(ii)(A), if the personal data is made publicly available by the Data Principal themselves, the provisions of the Act do not apply.",
+ "llm_s1": 2.02019129996188,
+ "answer2": "No, according to Section 3(ii)(A), if the personal data is made publicly available by the Data Principal themselves, the provisions of the Act do not apply. Therefore, the law does not protect your data in this scenario.",
+ "llm_s2": 2.613220499944873
+}

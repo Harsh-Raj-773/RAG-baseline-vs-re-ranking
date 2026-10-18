@@ -1,0 +1,97 @@
+{
+ "qid": "B1",
+ "category": "buried",
+ "query": "What penalty can a user face for impersonating someone else while sharing personal data?",
+ "gold": [
+  91
+ ],
+ "expected": "Schedule item 5 (breach of s.15 duties): up to Rs 10,000.",
+ "candidates": [
+  {
+   "chunk_id": 36,
+   "bi_rank": 1,
+   "bi_score": 0.5409826040267944,
+   "ce_score": -2.253317356109619,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 40,
+   "bi_rank": 2,
+   "bi_score": 0.5297857522964478,
+   "ce_score": -2.411470413208008,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 58,
+   "bi_rank": 10,
+   "bi_score": 0.4584546387195587,
+   "ce_score": -4.405977249145508,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 16,
+   "bi_rank": 7,
+   "bi_score": 0.48445186018943787,
+   "ce_score": -5.227094650268555,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 35,
+   "bi_rank": 6,
+   "bi_score": 0.4853516221046448,
+   "ce_score": -5.45759391784668,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 8,
+   "bi_rank": 4,
+   "bi_score": 0.5155077576637268,
+   "ce_score": -5.927685737609863,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 20,
+   "bi_rank": 5,
+   "bi_score": 0.4910910129547119,
+   "ce_score": -6.109659194946289,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 26,
+   "bi_rank": 3,
+   "bi_score": 0.5277755260467529,
+   "ce_score": -6.140089988708496,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 17,
+   "bi_rank": 8,
+   "bi_score": 0.47129732370376587,
+   "ce_score": -6.803683757781982,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 19,
+   "bi_rank": 9,
+   "bi_score": 0.46282774209976196,
+   "ce_score": -8.371405601501465,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  36,
+  40,
+  26
+ ],
+ "rr_top": [
+  36,
+  40,
+  58
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter III (Rights And Duties Of Data Principal) - Section 11: Right to access information about personal data\n(2) Nothing contained in clause (b) or clause (c) of sub-section (1) shall apply in respect of the sharing of any personal data by the said Data Fiduciary with any other Data Fiduciary authorised by law to obtain such personal data, where such sharing is pursuant to a request made in writing by such other Data Fiduciary for the purpose of prevention or detection or investigation of offences or cyber incidents, or for prosecution or punishment of offences.\n\n[2] Chapter III (Rights And Duties Of Data Principal) - Section 15: Duties of Data Principal\n15. A Data Principal shall perform the following duties, namely:— (a) comply with the provisions of all applicable laws for the time being in force while exercising rights under the provisions of this Act; (b) to ensure not to impersonate another person while providing her personal data for a specified purpose; (c) to ensure not to suppress any material information while providing her personal data for any document, unique identifier, proof of identity or proof of address issued by the State or any of its instrumentalities; (d) to ensure not to register a false or frivolous grievance or complaint with a Data Fiduciary or the Board; and (e) to furnish only such information as is verifiably authentic, while exercising the right to correction or erasure under the provisions of this Act or the rules made thereunder.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(5) A Data Fiduciary shall protect personal data in its possession or under its control, including in respect of any processing undertaken by it or on its behalf by a Data Processor, by taking reasonable security safeguards to prevent personal data breach. (6) In the event of a personal data breach, the Data Fiduciary shall give the Board and each affected Data Principal, intimation of such breach in such form and manner as may be prescribed. (7) A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— (a) erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and\n\nQuestion: What penalty can a user face for impersonating someone else while sharing personal data?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter III (Rights And Duties Of Data Principal) - Section 11: Right to access information about personal data\n(2) Nothing contained in clause (b) or clause (c) of sub-section (1) shall apply in respect of the sharing of any personal data by the said Data Fiduciary with any other Data Fiduciary authorised by law to obtain such personal data, where such sharing is pursuant to a request made in writing by such other Data Fiduciary for the purpose of prevention or detection or investigation of offences or cyber incidents, or for prosecution or punishment of offences.\n\n[2] Chapter III (Rights And Duties Of Data Principal) - Section 15: Duties of Data Principal\n15. A Data Principal shall perform the following duties, namely:— (a) comply with the provisions of all applicable laws for the time being in force while exercising rights under the provisions of this Act; (b) to ensure not to impersonate another person while providing her personal data for a specified purpose; (c) to ensure not to suppress any material information while providing her personal data for any document, unique identifier, proof of identity or proof of address issued by the State or any of its instrumentalities; (d) to ensure not to register a false or frivolous grievance or complaint with a Data Fiduciary or the Board; and (e) to furnish only such information as is verifiably authentic, while exercising the right to correction or erasure under the provisions of this Act or the rules made thereunder.\n\n[3] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 27: Powers and functions of Board\n27. (1) The Board shall exercise and perform the following powers and functions, namely:— (a) on receipt of an intimation of personal data breach under sub-section (6) of section 8, to direct any urgent remedial or mitigation measures in the event of a personal data breach, and to inquire into such personal data breach and impose penalty as provided in this Act; (b) on a complaint made by a Data Principal in respect of a personal data breach or a breach in observance by a Data Fiduciary of its obligations in relation to her personal data or the exercise of her rights under the provisions of this Act, or on a reference made to it by the Central Government or a State Government, or in compliance of the directions of any court, to inquire into such breach and impose penalty as provided in this Act;\n\nQuestion: What penalty can a user face for impersonating someone else while sharing personal data?\nAnswer:",
+ "answer1": "The provided context does not explicitly state a penalty for impersonating someone else while sharing personal data. However, it mentions that a Data Principal has a duty to ensure they do not impersonate another person while providing their personal data for a specified purpose (Section 15(c)). Impersonation could potentially violate these duties, but specific penalties are not detailed in the given sections.",
+ "llm_s1": 4.0939157999819145,
+ "answer2": "The provided context does not explicitly state what penalty a user can face for impersonating someone else while sharing personal data. However, based on Section 15(c) of Chapter III, which outlines duties of the Data Principal, it implies that impersonation could be considered a violation of the duty not to impersonate another person. While specific penalties are not detailed, the Board's powers to inquire into and impose penalties for impersonation in the context of personal data breaches suggest that such behavior could lead to penalties under the Act.",
+ "llm_s2": 5.648594900034368
+}

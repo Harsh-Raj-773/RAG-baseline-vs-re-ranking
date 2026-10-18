@@ -1,0 +1,98 @@
+{
+ "qid": "K3",
+ "category": "keyword trap",
+ "query": "Can the government shut down public access to an online platform that keeps breaking data protection law?",
+ "gold": [
+  77,
+  78
+ ],
+ "expected": "Yes. s.37: after penalties in two or more instances and a Board reference, the Centre can order public access blocked.",
+ "candidates": [
+  {
+   "chunk_id": 78,
+   "bi_rank": 1,
+   "bi_score": 0.4519064724445343,
+   "ce_score": -4.457963943481445,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 1,
+   "bi_rank": 4,
+   "bi_score": 0.4322700500488281,
+   "ce_score": -7.4436798095703125,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 0,
+   "bi_rank": 3,
+   "bi_score": 0.4343339204788208,
+   "ce_score": -7.950259685516357,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 16,
+   "bi_rank": 8,
+   "bi_score": 0.41160672903060913,
+   "ce_score": -8.78955364227295,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 15,
+   "bi_rank": 10,
+   "bi_score": 0.4036787450313568,
+   "ce_score": -8.806266784667969,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 22,
+   "bi_rank": 5,
+   "bi_score": 0.4291746914386749,
+   "ce_score": -9.120482444763184,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 14,
+   "bi_rank": 6,
+   "bi_score": 0.42150211334228516,
+   "ce_score": -9.614896774291992,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 36,
+   "bi_rank": 9,
+   "bi_score": 0.41031384468078613,
+   "ce_score": -9.953147888183594,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 17,
+   "bi_rank": 2,
+   "bi_score": 0.4473498463630676,
+   "ce_score": -10.354089736938477,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 8,
+   "bi_rank": 7,
+   "bi_score": 0.4155957102775574,
+   "ce_score": -10.572237968444824,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  78,
+  17,
+  0
+ ],
+ "rr_top": [
+  78,
+  1,
+  0
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter IX (Miscellaneous) - Section 37: Power of Central Government to issue directions\n(b) advises, in the interests of the general public, the blocking for access by the public to any information generated, transmitted, received, stored or hosted, in any computer resource that enables such Data Fiduciary to carry on any activity relating to offering of goods or services to Data Principals within the territory of India, after giving an opportunity of being heard to that Data Fiduciary, on being satisfied that it is necessary or expedient so to do, in the interests of the general public, for reasons to be recorded in writing, by order, direct any agency of the Central Government or any intermediary to block for access by the public or cause to be blocked for access by the public any such information. (2) Every intermediary who receives a direction issued under sub-section (1) shall be bound to comply with the same. (3) For the purposes of this section, the expressions “computer resource”, “information” and “intermediary” shall have the meanings respectively assigned to them in the Information Technology Act, 2000.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 6: Consent\n(6) If a Data Principal withdraws her consent to the processing of personal data under sub-section (5), the Data Fiduciary shall, within a reasonable time, cease and cause its Data Processors to cease processing the personal data of such Data Principal unless such processing without her consent is required or authorised under the provisions of this Act or the rules made thereunder or any other law for the time being in force in India. Illustration. X, a telecom service provider, enters into a contract with Y, a Data Processor, for emailing telephone bills to the customers of X. Z, a customer of X, who had earlier given her consent to X for the processing of her personal data for emailing of bills, downloads the mobile app of X and opts to receive bills only on the app. X shall itself cease, and shall cause Y to cease, the processing of the personal data of Z for emailing bills.\n\n[3] Preamble - Long title\nTHE DIGITAL PERSONAL DATA PROTECTION ACT, 2023 (NO. 22 OF 2023) [11th August, 2023.] An Act to provide for the processing of digital personal data in a manner that recognises both the right of individuals to protect their personal data and the need to process such personal data for lawful purposes and for matters connected therewith or incidental thereto. BE it enacted by Parliament in the Seventy-fourth Year of the Republic of India as follows:––\n\nQuestion: Can the government shut down public access to an online platform that keeps breaking data protection law?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter IX (Miscellaneous) - Section 37: Power of Central Government to issue directions\n(b) advises, in the interests of the general public, the blocking for access by the public to any information generated, transmitted, received, stored or hosted, in any computer resource that enables such Data Fiduciary to carry on any activity relating to offering of goods or services to Data Principals within the territory of India, after giving an opportunity of being heard to that Data Fiduciary, on being satisfied that it is necessary or expedient so to do, in the interests of the general public, for reasons to be recorded in writing, by order, direct any agency of the Central Government or any intermediary to block for access by the public or cause to be blocked for access by the public any such information. (2) Every intermediary who receives a direction issued under sub-section (1) shall be bound to comply with the same. (3) For the purposes of this section, the expressions “computer resource”, “information” and “intermediary” shall have the meanings respectively assigned to them in the Information Technology Act, 2000.\n\n[2] Chapter I (Preliminary) - Section 1: Short title and commencement\n1. (1) This Act may be called the Digital Personal Data Protection Act, 2023. (2) It shall come into force on such date as the Central Government may, by notification in the Official Gazette, appoint and different dates may be appointed for different provisions of this Act and any reference in any such provision to the commencement of this Act shall be construed as a reference to the coming into force of that provision.\n\n[3] Preamble - Long title\nTHE DIGITAL PERSONAL DATA PROTECTION ACT, 2023 (NO. 22 OF 2023) [11th August, 2023.] An Act to provide for the processing of digital personal data in a manner that recognises both the right of individuals to protect their personal data and the need to process such personal data for lawful purposes and for matters connected therewith or incidental thereto. BE it enacted by Parliament in the Seventy-fourth Year of the Republic of India as follows:––\n\nQuestion: Can the government shut down public access to an online platform that keeps breaking data protection law?\nAnswer:",
+ "answer1": "Yes, based on Section 37 of Chapter IX, if the Central Government is satisfied that it is necessary or expedient to block access to information due to the Data Fiduciary's non-compliance with data protection laws, they can issue a direction advising the blocking of access by intermediaries. This aligns with the government's power to enforce compliance through measures like blocking access.",
+ "llm_s1": 4.282396800001152,
+ "answer2": "Yes, based on Section 37(1)(b) of the Digital Personal Data Protection Act, 2023, if the Central Government is satisfied that it is necessary or expedient to do so for the general public's interest, they can issue a direction advising the blocking of access to information generated by a Data Fiduciary that is offering goods or services to Data Principals within India. The intermediary must comply with such a direction.",
+ "llm_s2": 4.9566011999268085
+}

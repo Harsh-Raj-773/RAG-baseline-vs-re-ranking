@@ -1,0 +1,97 @@
+{
+ "qid": "N4",
+ "category": "negation",
+ "query": "After I withdraw consent, which processing is the company not allowed to stop?",
+ "gold": [
+  16
+ ],
+ "expected": "s.6(5) illustration: it may not stop processing needed to supply goods already ordered and paid for.",
+ "candidates": [
+  {
+   "chunk_id": 16,
+   "bi_rank": 1,
+   "bi_score": 0.623727560043335,
+   "ce_score": 4.167323589324951,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 17,
+   "bi_rank": 2,
+   "bi_score": 0.5016101598739624,
+   "ce_score": 1.4129068851470947,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 12,
+   "bi_rank": 6,
+   "bi_score": 0.4077608585357666,
+   "ce_score": -3.2990541458129883,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 15,
+   "bi_rank": 3,
+   "bi_score": 0.47158682346343994,
+   "ce_score": -5.918528079986572,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 18,
+   "bi_rank": 4,
+   "bi_score": 0.44401681423187256,
+   "ce_score": -6.418913841247559,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 27,
+   "bi_rank": 5,
+   "bi_score": 0.42180442810058594,
+   "ce_score": -8.301246643066406,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 14,
+   "bi_rank": 9,
+   "bi_score": 0.3868195712566376,
+   "ce_score": -8.734872817993164,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 53,
+   "bi_rank": 10,
+   "bi_score": 0.38525691628456116,
+   "ce_score": -10.498247146606445,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 59,
+   "bi_rank": 7,
+   "bi_score": 0.40225949883461,
+   "ce_score": -10.824390411376953,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 82,
+   "bi_rank": 8,
+   "bi_score": 0.3943102955818176,
+   "ce_score": -11.092998504638672,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  16,
+  17,
+  15
+ ],
+ "rr_top": [
+  16,
+  17,
+  12
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter II (Obligations Of Data Fiduciary) - Section 6: Consent\n(5) The consequences of the withdrawal referred to in sub-section (4) shall be borne by the Data Principal, and such withdrawal shall not affect the legality of processing of the personal data based on consent before its withdrawal. Illustration. X, an individual, is the user of an online shopping app or website operated by Y, an e-commerce service provider. X consents to the processing of her personal data by Y for the purpose of fulfilling her supply order and places an order for supply of a good while making payment for the same. If X withdraws her consent, Y may stop enabling X to use the app or website for placing orders, but may not stop the processing for supply of the goods already ordered and paid for by X.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 6: Consent\n(6) If a Data Principal withdraws her consent to the processing of personal data under sub-section (5), the Data Fiduciary shall, within a reasonable time, cease and cause its Data Processors to cease processing the personal data of such Data Principal unless such processing without her consent is required or authorised under the provisions of this Act or the rules made thereunder or any other law for the time being in force in India. Illustration. X, a telecom service provider, enters into a contract with Y, a Data Processor, for emailing telephone bills to the customers of X. Z, a customer of X, who had earlier given her consent to X for the processing of her personal data for emailing of bills, downloads the mobile app of X and opts to receive bills only on the app. X shall itself cease, and shall cause Y to cease, the processing of the personal data of Z for emailing bills.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 6: Consent\n(3) Every request for consent under the provisions of this Act or the rules made thereunder shall be presented to the Data Principal in a clear and plain language, giving her the option to access such request in English or any language specified in the Eighth Schedule to the Constitution and providing the contact details of a Data Protection Officer, where applicable, or of any other person authorised by the Data Fiduciary to respond to any communication from the Data Principal for the purpose of exercise of her rights under the provisions of this Act. (4) Where consent given by the Data Principal is the basis of processing of personal data, such Data Principal shall have the right to withdraw her consent at any time, with the ease of doing so being comparable to the ease with which such consent was given.\n\nQuestion: After I withdraw consent, which processing is the company not allowed to stop?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter II (Obligations Of Data Fiduciary) - Section 6: Consent\n(5) The consequences of the withdrawal referred to in sub-section (4) shall be borne by the Data Principal, and such withdrawal shall not affect the legality of processing of the personal data based on consent before its withdrawal. Illustration. X, an individual, is the user of an online shopping app or website operated by Y, an e-commerce service provider. X consents to the processing of her personal data by Y for the purpose of fulfilling her supply order and places an order for supply of a good while making payment for the same. If X withdraws her consent, Y may stop enabling X to use the app or website for placing orders, but may not stop the processing for supply of the goods already ordered and paid for by X.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 6: Consent\n(6) If a Data Principal withdraws her consent to the processing of personal data under sub-section (5), the Data Fiduciary shall, within a reasonable time, cease and cause its Data Processors to cease processing the personal data of such Data Principal unless such processing without her consent is required or authorised under the provisions of this Act or the rules made thereunder or any other law for the time being in force in India. Illustration. X, a telecom service provider, enters into a contract with Y, a Data Processor, for emailing telephone bills to the customers of X. Z, a customer of X, who had earlier given her consent to X for the processing of her personal data for emailing of bills, downloads the mobile app of X and opts to receive bills only on the app. X shall itself cease, and shall cause Y to cease, the processing of the personal data of Z for emailing bills.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 5: Notice\n(b) the Data Fiduciary may continue to process the personal data until and unless the Data Principal withdraws her consent. Illustration. X, an individual, gave her consent to the processing of her personal data for an online shopping app or website operated by Y, an e-commerce service provider, before the commencement of this Act. Upon commencement of the Act, Y shall, as soon as practicable, give through email, in-app notification or other effective method information to X, describing the personal data and the purpose of its processing. (3) The Data Fiduciary shall give the Data Principal the option to access the contents of the notice referred to in sub-sections (1) and (2) in English or any language specified in the Eighth Schedule to the Constitution.\n\nQuestion: After I withdraw consent, which processing is the company not allowed to stop?\nAnswer:",
+ "answer1": "The company is not allowed to stop the processing of personal data for supply of goods already ordered and paid for by the Data Principal, as per Section 6(5) of the Act.",
+ "llm_s1": 2.3142178000416607,
+ "answer2": "If a Data Principal withdraws her consent to the processing of personal data under Section 6(5), the company is not allowed to stop the processing for supply of goods already ordered and paid for by the Data Principal. This is illustrated in the example where X withdraws her consent to Y for processing her personal data for fulfilling her supply order, but Y may still continue to process the personal data for supplying the goods she has already ordered and paid for.",
+ "llm_s2": 5.025080099934712
+}

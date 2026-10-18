@@ -1,0 +1,97 @@
+{
+ "qid": "E6",
+ "category": "exception",
+ "query": "Does the Act apply to personal data used for research or statistics?",
+ "gold": [
+  45
+ ],
+ "expected": "s.17(2)(b): no, if the data is not used for decisions specific to a person and prescribed standards are followed.",
+ "candidates": [
+  {
+   "chunk_id": 45,
+   "bi_rank": 4,
+   "bi_score": 0.5569967031478882,
+   "ce_score": 6.924658298492432,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 8,
+   "bi_rank": 1,
+   "bi_score": 0.611880898475647,
+   "ce_score": 4.421337127685547,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 9,
+   "bi_rank": 2,
+   "bi_score": 0.5935187339782715,
+   "ce_score": 0.9716425538063049,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 36,
+   "bi_rank": 8,
+   "bi_score": 0.5216097235679626,
+   "ce_score": 0.5012186169624329,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 22,
+   "bi_rank": 5,
+   "bi_score": 0.537812352180481,
+   "ce_score": -2.115675926208496,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 40,
+   "bi_rank": 7,
+   "bi_score": 0.5229947566986084,
+   "ce_score": -2.888890266418457,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 19,
+   "bi_rank": 3,
+   "bi_score": 0.5733515024185181,
+   "ce_score": -2.9334259033203125,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 20,
+   "bi_rank": 9,
+   "bi_score": 0.5213778614997864,
+   "ce_score": -3.74660587310791,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 21,
+   "bi_rank": 6,
+   "bi_score": 0.5374742150306702,
+   "ce_score": -4.421879291534424,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 31,
+   "bi_rank": 10,
+   "bi_score": 0.5050984621047974,
+   "ce_score": -5.5151872634887695,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  8,
+  9,
+  19
+ ],
+ "rr_top": [
+  45,
+  8,
+  9
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter I (Preliminary) - Section 3: Application of Act\n(ii) personal data that is made or caused to be made publicly available by— (A) the Data Principal to whom such personal data relates; or (B) any other person who is under an obligation under any law for the time being in force in India to make such personal data publicly available. Illustration. X, an individual, while blogging her views, has publicly made available her personal data on social media. In such case, the provisions of this Act shall not apply.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 4: Grounds for processing personal data\n4. (1) A person may process the personal data of a Data Principal only in accordance with the provisions of this Act and for a lawful purpose,— (a) for which the Data Principal has given her consent; or (b) for certain legitimate uses. (2) For the purposes of this section, the expression “lawful purpose” means any purpose which is not expressly forbidden by law.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 7: Certain legitimate uses\n7. A Data Fiduciary may process personal data of a Data Principal for any of following uses, namely:—\n\nQuestion: Does the Act apply to personal data used for research or statistics?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter IV (Special Provisions) - Section 17: Exemptions\n(2) The provisions of this Act shall not apply in respect of the processing of personal data— (a) by such instrumentality of the State as the Central Government may notify, in the interests of sovereignty and integrity of India, security of the State, friendly relations with foreign States, maintenance of public order or preventing incitement to any cognizable offence relating to any of these, and the processing by the Central Government of any personal data that such instrumentality may furnish to it; and (b) necessary for research, archiving or statistical purposes if the personal data is not to be used to take any decision specific to a Data Principal and such processing is carried on in accordance with such standards as may be prescribed.\n\n[2] Chapter I (Preliminary) - Section 3: Application of Act\n(ii) personal data that is made or caused to be made publicly available by— (A) the Data Principal to whom such personal data relates; or (B) any other person who is under an obligation under any law for the time being in force in India to make such personal data publicly available. Illustration. X, an individual, while blogging her views, has publicly made available her personal data on social media. In such case, the provisions of this Act shall not apply.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 4: Grounds for processing personal data\n4. (1) A person may process the personal data of a Data Principal only in accordance with the provisions of this Act and for a lawful purpose,— (a) for which the Data Principal has given her consent; or (b) for certain legitimate uses. (2) For the purposes of this section, the expression “lawful purpose” means any purpose which is not expressly forbidden by law.\n\nQuestion: Does the Act apply to personal data used for research or statistics?\nAnswer:",
+ "answer1": "The provided context does not explicitly mention research or statistics as specific uses for which the Act allows processing of personal data. However, it lists certain legitimate uses for processing personal data, including \"for any of following uses, namely:\" which could imply that if a use falls under these legitimate uses, the Act might apply. Research and statistics are not directly mentioned but could potentially fall under \"certain legitimate uses\" if they align with the conditions outlined in the Act.",
+ "llm_s1": 4.813047700095922,
+ "answer2": "Yes, the Act applies to personal data used for research or statistics if it is processed in accordance with prescribed standards and the data is not used to take decisions specific to a Data Principal. This is evident from Section 17(2)(b) of Chapter IV, which exempts processing for research, archiving, or statistical purposes under certain conditions.",
+ "llm_s2": 4.227687200065702
+}

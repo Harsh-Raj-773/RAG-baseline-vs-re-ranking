@@ -1,0 +1,25 @@
+qid,category,shift,outcome,Answer 1,Answer 2,note
+K1,keyword trap,#1 -> #1,both OK,wrong,correct,A1 says Rs 200 crore (row 2 of the Schedule); the correct cap is Rs 250 crore
+K2,keyword trap,#1 -> #1,both OK,correct,correct,
+K3,keyword trap,#1 -> #1,both OK,correct,correct,
+K4,keyword trap,#1 -> #1,both OK,correct,partial,A2 mixes in the 'purpose no longer served' rule
+K5,keyword trap,#2 -> #3,both OK,correct,correct,
+K6,keyword trap,#7 -> #1,FIXED by re-ranking,refusal,wrong,A2 claims the Act gives no age; s.2(f) (18 years) was in its context
+E1,exception,#2 -> #2,both OK,partial,correct,A1 concludes startups 'might need' to give notice
+E2,exception,#2 -> #1,both OK,correct,partial,A2 drops the 'specified purpose' ground for retention
+E3,exception,#2 -> #1,both OK,correct,correct,
+E4,exception,#1 -> #1,both OK,correct,correct,
+E5,exception,#1 -> #1,both OK,correct,correct,
+E6,exception,#4 -> #1,FIXED by re-ranking,refusal,partial,A2 finds s.17(2)(b) but says the Act 'applies' - polarity inverted
+E7,exception,#1 -> #1,both OK,correct,partial,A2 garbles who the disclosure is to
+N1,negation,#1 -> #1,both OK,correct,partial,A2 omits the well-being and parental-consent limits
+N2,negation,#1 -> #1,both OK,partial,partial,"both open with 'Yes, you can' before saying the waiver is invalid"
+N3,negation,#4 -> #1,FIXED by re-ranking,refusal,correct,
+N4,negation,#1 -> #1,both OK,correct,correct,
+N5,negation,#2 -> #1,both OK,partial,partial,"both list only impersonation, not the other duties"
+N6,negation,#>10 -> #>10,out of reach (not in top 10),refusal,refusal,gold chunk outside the top 10
+B1,buried,#>10 -> #>10,out of reach (not in top 10),partial,partial,"both find the s.15 duty, neither finds the Rs 10,000 Schedule penalty"
+B2,buried,#1 -> #1,both OK,correct,correct,
+B3,buried,#>10 -> #>10,out of reach (not in top 10),refusal,refusal,gold chunk at bi-encoder rank 11
+B4,buried,#>10 -> #>10,out of reach (not in top 10),refusal,refusal,gold chunk outside the top 10
+B5,buried,#>10 -> #>10,out of reach (not in top 10),wrong,wrong,both claim you can go straight to the Board; s.13(3) says the opposite

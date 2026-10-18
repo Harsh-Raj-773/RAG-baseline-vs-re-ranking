@@ -1,0 +1,97 @@
+{
+ "qid": "K1",
+ "category": "keyword trap",
+ "query": "What is the maximum fine if a company fails to protect user data from a security breach?",
+ "gold": [
+  90
+ ],
+ "expected": "Schedule item 1: up to Rs 250 crore for failing to take reasonable security safeguards (s.8(5)).",
+ "candidates": [
+  {
+   "chunk_id": 90,
+   "bi_rank": 1,
+   "bi_score": 0.5070239305496216,
+   "ce_score": 1.2430336475372314,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 26,
+   "bi_rank": 3,
+   "bi_score": 0.47654587030410767,
+   "ce_score": -3.0906989574432373,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 58,
+   "bi_rank": 4,
+   "bi_score": 0.46044403314590454,
+   "ce_score": -6.245934963226318,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 73,
+   "bi_rank": 2,
+   "bi_score": 0.5041371583938599,
+   "ce_score": -6.4197564125061035,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 59,
+   "bi_rank": 7,
+   "bi_score": 0.41114941239356995,
+   "ce_score": -7.542869567871094,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 14,
+   "bi_rank": 5,
+   "bi_score": 0.4597395956516266,
+   "ce_score": -9.095804214477539,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 5,
+   "bi_rank": 6,
+   "bi_score": 0.4308461844921112,
+   "ce_score": -9.465463638305664,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 33,
+   "bi_rank": 8,
+   "bi_score": 0.40396302938461304,
+   "ce_score": -9.821739196777344,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 36,
+   "bi_rank": 9,
+   "bi_score": 0.40394625067710876,
+   "ce_score": -9.866290092468262,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 11,
+   "bi_rank": 10,
+   "bi_score": 0.39149314165115356,
+   "ce_score": -10.790992736816406,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  90,
+  73,
+  26
+ ],
+ "rr_top": [
+  90,
+  26,
+  58
+ ],
+ "prompt1": "Context excerpts:\n[1] The Schedule - monetary penalties [See section 33(1)]\n1. Breach in observing the obligation of Data Fiduciary to take reasonable security safeguards to prevent personal data breach under sub-section (5) of section 8. Penalty: May extend to two hundred and fifty crore rupees. 2. Breach in observing the obligation to give the Board or affected Data Principal notice of a personal data breach under sub-section (6) of section 8. Penalty: May extend to two hundred crore rupees. 3. Breach in observance of additional obligations in relation to children under section 9. Penalty: May extend to two hundred crore rupees. 4. Breach in observance of additional obligations of Significant Data Fiduciary under section 10. Penalty: May extend to one hundred and fifty crore rupees.\n\n[2] Chapter VIII (Penalties And Adjudication) - Section 33: Penalties\n(2) While determining the amount of monetary penalty to be imposed under sub-section (1), the Board shall have regard to the following matters, namely:— (a) the nature, gravity and duration of the breach; (b) the type and nature of the personal data affected by the breach; (c) repetitive nature of the breach; (d) whether the person, as a result of the breach, has realised a gain or avoided any loss; (e) whether the person took any action to mitigate the effects and consequences of the breach, and the timeliness and effectiveness of such action; (f) whether the monetary penalty to be imposed is proportionate and effective, having regard to the need to secure observance of and deter breach of the provisions of this Act; and (g) the likely impact of the imposition of the monetary penalty on the person.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(5) A Data Fiduciary shall protect personal data in its possession or under its control, including in respect of any processing undertaken by it or on its behalf by a Data Processor, by taking reasonable security safeguards to prevent personal data breach. (6) In the event of a personal data breach, the Data Fiduciary shall give the Board and each affected Data Principal, intimation of such breach in such form and manner as may be prescribed. (7) A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— (a) erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and\n\nQuestion: What is the maximum fine if a company fails to protect user data from a security breach?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] The Schedule - monetary penalties [See section 33(1)]\n1. Breach in observing the obligation of Data Fiduciary to take reasonable security safeguards to prevent personal data breach under sub-section (5) of section 8. Penalty: May extend to two hundred and fifty crore rupees. 2. Breach in observing the obligation to give the Board or affected Data Principal notice of a personal data breach under sub-section (6) of section 8. Penalty: May extend to two hundred crore rupees. 3. Breach in observance of additional obligations in relation to children under section 9. Penalty: May extend to two hundred crore rupees. 4. Breach in observance of additional obligations of Significant Data Fiduciary under section 10. Penalty: May extend to one hundred and fifty crore rupees.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(5) A Data Fiduciary shall protect personal data in its possession or under its control, including in respect of any processing undertaken by it or on its behalf by a Data Processor, by taking reasonable security safeguards to prevent personal data breach. (6) In the event of a personal data breach, the Data Fiduciary shall give the Board and each affected Data Principal, intimation of such breach in such form and manner as may be prescribed. (7) A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— (a) erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and\n\n[3] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 27: Powers and functions of Board\n27. (1) The Board shall exercise and perform the following powers and functions, namely:— (a) on receipt of an intimation of personal data breach under sub-section (6) of section 8, to direct any urgent remedial or mitigation measures in the event of a personal data breach, and to inquire into such personal data breach and impose penalty as provided in this Act; (b) on a complaint made by a Data Principal in respect of a personal data breach or a breach in observance by a Data Fiduciary of its obligations in relation to her personal data or the exercise of her rights under the provisions of this Act, or on a reference made to it by the Central Government or a State Government, or in compliance of the directions of any court, to inquire into such breach and impose penalty as provided in this Act;\n\nQuestion: What is the maximum fine if a company fails to protect user data from a security breach?\nAnswer:",
+ "answer1": "According to section 33(1)(a) of the Act, if a Data Fiduciary breaches the obligation to take reasonable security safeguards to prevent personal data breaches as per section 8(5), the maximum monetary penalty is two hundred crore rupees.",
+ "llm_s1": 3.19953159999568,
+ "answer2": "According to section 33(1) of the Act, if a Data Fiduciary breaches the obligation to take reasonable security safeguards to prevent personal data breaches, the maximum fine is two hundred and fifty crore rupees.",
+ "llm_s2": 2.7277721000136808
+}

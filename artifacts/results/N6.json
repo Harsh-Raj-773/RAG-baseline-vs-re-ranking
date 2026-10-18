@@ -1,0 +1,97 @@
+{
+ "qid": "N6",
+ "category": "negation",
+ "query": "Can a regular civil court hear a dispute about a data protection matter?",
+ "gold": [
+  80
+ ],
+ "expected": "s.39: no civil court has jurisdiction over matters the Board is empowered to decide; no injunctions.",
+ "candidates": [
+  {
+   "chunk_id": 14,
+   "bi_rank": 1,
+   "bi_score": 0.4999021887779236,
+   "ce_score": -7.91426944732666,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 26,
+   "bi_rank": 9,
+   "bi_score": 0.44898131489753723,
+   "ce_score": -7.945361137390137,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 33,
+   "bi_rank": 6,
+   "bi_score": 0.4732533097267151,
+   "ce_score": -8.581357955932617,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 28,
+   "bi_rank": 4,
+   "bi_score": 0.48203498125076294,
+   "ce_score": -9.00158405303955,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 83,
+   "bi_rank": 5,
+   "bi_score": 0.4788934886455536,
+   "ce_score": -9.084803581237793,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 36,
+   "bi_rank": 7,
+   "bi_score": 0.46599456667900085,
+   "ce_score": -9.877264022827148,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 40,
+   "bi_rank": 2,
+   "bi_score": 0.49526768922805786,
+   "ce_score": -10.162498474121094,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 38,
+   "bi_rank": 8,
+   "bi_score": 0.4586968421936035,
+   "ce_score": -10.40672492980957,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 21,
+   "bi_rank": 10,
+   "bi_score": 0.43627727031707764,
+   "ce_score": -10.53875732421875,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 11,
+   "bi_rank": 3,
+   "bi_score": 0.49200135469436646,
+   "ce_score": -10.724784851074219,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  14,
+  40,
+  11
+ ],
+ "rr_top": [
+  14,
+  26,
+  33
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter II (Obligations Of Data Fiduciary) - Section 6: Consent\n(2) Any part of consent referred in sub-section (1) which constitutes an infringement of the provisions of this Act or the rules made thereunder or any other law for the time being in force shall be invalid to the extent of such infringement. Illustration. X, an individual, buys an insurance policy using the mobile app or website of Y, an insurer. She gives to Y her consent for (i) the processing of her personal data by Y for the purpose of issuing the policy, and (ii) waiving her right to file a complaint to the Data Protection Board of India. Part (ii) of the consent, relating to waiver of her right to file a complaint, shall be invalid.\n\n[2] Chapter III (Rights And Duties Of Data Principal) - Section 15: Duties of Data Principal\n15. A Data Principal shall perform the following duties, namely:— (a) comply with the provisions of all applicable laws for the time being in force while exercising rights under the provisions of this Act; (b) to ensure not to impersonate another person while providing her personal data for a specified purpose; (c) to ensure not to suppress any material information while providing her personal data for any document, unique identifier, proof of identity or proof of address issued by the State or any of its instrumentalities; (d) to ensure not to register a false or frivolous grievance or complaint with a Data Fiduciary or the Board; and (e) to furnish only such information as is verifiably authentic, while exercising the right to correction or erasure under the provisions of this Act or the rules made thereunder.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 5: Notice\n(2) Where a Data Principal has given her consent for the processing of her personal data before the date of commencement of this Act,— (a) the Data Fiduciary shall, as soon as it is reasonably practicable, give to the Data Principal a notice informing her,–– (i) the personal data and the purpose for which the same has been processed; (ii) the manner in which she may exercise her rights under sub-section (4) of section 6 and section 13; and (iii) the manner in which the Data Principal may make a complaint to the Board, in such manner and as may be prescribed.\n\nQuestion: Can a regular civil court hear a dispute about a data protection matter?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter II (Obligations Of Data Fiduciary) - Section 6: Consent\n(2) Any part of consent referred in sub-section (1) which constitutes an infringement of the provisions of this Act or the rules made thereunder or any other law for the time being in force shall be invalid to the extent of such infringement. Illustration. X, an individual, buys an insurance policy using the mobile app or website of Y, an insurer. She gives to Y her consent for (i) the processing of her personal data by Y for the purpose of issuing the policy, and (ii) waiving her right to file a complaint to the Data Protection Board of India. Part (ii) of the consent, relating to waiver of her right to file a complaint, shall be invalid.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(5) A Data Fiduciary shall protect personal data in its possession or under its control, including in respect of any processing undertaken by it or on its behalf by a Data Processor, by taking reasonable security safeguards to prevent personal data breach. (6) In the event of a personal data breach, the Data Fiduciary shall give the Board and each affected Data Principal, intimation of such breach in such form and manner as may be prescribed. (7) A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— (a) erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 10: Additional obligations of Significant Data Fiduciary\n(2) The Significant Data Fiduciary shall— (a) appoint a Data Protection Officer who shall— (i) represent the Significant Data Fiduciary under the provisions of this Act; (ii) be based in India; (iii) be an individual responsible to the Board of Directors or similar governing body of the Significant Data Fiduciary; and (iv) be the point of contact for the grievance redressal mechanism under the provisions of this Act; (b) appoint an independent data auditor to carry out data audit, who shall evaluate the compliance of the Significant Data Fiduciary in accordance with the provisions of this Act; and (c) undertake the following other measures, namely:— (i) periodic Data Protection Impact Assessment, which shall be a process comprising a description of the rights of Data Principals and the purpose of processing of their personal data, assessment and management of the risk to the rights of the Data Principals, and such other matters regarding such process as may be prescribed;\n\nQuestion: Can a regular civil court hear a dispute about a data protection matter?\nAnswer:",
+ "answer1": "The provided context does not answer this.",
+ "llm_s1": 0.6845013999845833,
+ "answer2": "The provided context does not answer this.",
+ "llm_s2": 0.7385486999992281
+}

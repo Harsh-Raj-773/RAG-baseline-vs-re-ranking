@@ -1,0 +1,97 @@
+{
+ "qid": "E4",
+ "category": "exception",
+ "query": "Can a former Board member immediately join a private company after leaving office?",
+ "gold": [
+  53
+ ],
+ "expected": "s.22(3): not for one year after leaving office, except with prior approval of the Central Government.",
+ "candidates": [
+  {
+   "chunk_id": 53,
+   "bi_rank": 1,
+   "bi_score": 0.45677220821380615,
+   "ce_score": -5.9385809898376465,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 52,
+   "bi_rank": 2,
+   "bi_score": 0.42241859436035156,
+   "ce_score": -6.629603385925293,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 51,
+   "bi_rank": 4,
+   "bi_score": 0.37550899386405945,
+   "ce_score": -7.906091690063477,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 54,
+   "bi_rank": 3,
+   "bi_score": 0.378754198551178,
+   "ce_score": -9.599870681762695,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 63,
+   "bi_rank": 7,
+   "bi_score": 0.29904481768608093,
+   "ce_score": -10.439851760864258,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 49,
+   "bi_rank": 10,
+   "bi_score": 0.27414917945861816,
+   "ce_score": -10.894608497619629,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 48,
+   "bi_rank": 5,
+   "bi_score": 0.340531587600708,
+   "ce_score": -11.018633842468262,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 61,
+   "bi_rank": 8,
+   "bi_score": 0.2769799530506134,
+   "ce_score": -11.039567947387695,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 84,
+   "bi_rank": 6,
+   "bi_score": 0.3266003131866455,
+   "ce_score": -11.075403213500977,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 46,
+   "bi_rank": 9,
+   "bi_score": 0.2767528295516968,
+   "ce_score": -11.14633560180664,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  53,
+  52,
+  54
+ ],
+ "rr_top": [
+  53,
+  52,
+  51
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter V (Data Protection Board Of India) - Section 22: Resignation by Members and filling of vacancy\n(3) The Chairperson and any other Member shall not, for a period of one year from the date on which they cease to hold such office, except with the previous approval of the Central Government, accept any employment, and shall also disclose to the Central Government any subsequent acceptance of employment with any Data Fiduciary against whom proceedings were initiated by or before such Chairperson or other Member.\n\n[2] Chapter V (Data Protection Board Of India) - Section 22: Resignation by Members and filling of vacancy\n22. (1) The Chairperson or any other Member may give notice in writing to the Central Government of resigning from her office, and such resignation shall be effective from the date on which the Central Government permits her to relinquish office, or upon expiry of a period of three months from the date of receipt of such notice, or upon a duly appointed successor entering upon her office, or upon the expiry of the term of her office, whichever is earliest. (2) A vacancy caused by the resignation or removal or death of the Chairperson or any other Member, or otherwise, shall be filled by fresh appointment in accordance with the provisions of this Act.\n\n[3] Chapter V (Data Protection Board Of India) - Section 23: Proceedings of Board\n23. (1) The Board shall observe such procedure in regard to the holding of and transaction of business at its meetings, including by digital means, and authenticate its orders, directions and instruments in such manner as may be prescribed. (2) No act or proceeding of the Board shall be invalid merely by reason of— (a) any vacancy in or any defect in the constitution of the Board; (b) any defect in the appointment of a person acting as the Chairperson or other Member of the Board; or (c) any irregularity in the procedure of the Board, which does not affect the merits of the case. (3) When the Chairperson is unable to discharge her functions owing to absence, illness or any other cause, the senior-most Member shall discharge the functions of the Chairperson until the date on which the Chairperson resumes her duties.\n\nQuestion: Can a former Board member immediately join a private company after leaving office?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter V (Data Protection Board Of India) - Section 22: Resignation by Members and filling of vacancy\n(3) The Chairperson and any other Member shall not, for a period of one year from the date on which they cease to hold such office, except with the previous approval of the Central Government, accept any employment, and shall also disclose to the Central Government any subsequent acceptance of employment with any Data Fiduciary against whom proceedings were initiated by or before such Chairperson or other Member.\n\n[2] Chapter V (Data Protection Board Of India) - Section 22: Resignation by Members and filling of vacancy\n22. (1) The Chairperson or any other Member may give notice in writing to the Central Government of resigning from her office, and such resignation shall be effective from the date on which the Central Government permits her to relinquish office, or upon expiry of a period of three months from the date of receipt of such notice, or upon a duly appointed successor entering upon her office, or upon the expiry of the term of her office, whichever is earliest. (2) A vacancy caused by the resignation or removal or death of the Chairperson or any other Member, or otherwise, shall be filled by fresh appointment in accordance with the provisions of this Act.\n\n[3] Chapter V (Data Protection Board Of India) - Section 21: Disqualifications for appointment and continuation as Chairperson and Members of Board\n21. (1) A person shall be disqualified for being appointed and continued as the Chairperson or a Member, if she— (a) has been adjudged as an insolvent; (b) has been convicted of an offence, which in the opinion of the Central Government, involves moral turpitude; (c) has become physically or mentally incapable of acting as a Member; (d) has acquired such financial or other interest, as is likely to affect prejudicially her functions as a Member; or (e) has so abused her position as to render her continuance in office prejudicial to the public interest. (2) The Chairperson or Member shall not be removed from her office by the Central Government unless she has been given an opportunity of being heard in the matter.\n\nQuestion: Can a former Board member immediately join a private company after leaving office?\nAnswer:",
+ "answer1": "No, a former Board member cannot immediately join a private company after leaving office. According to Section 22(1)(a), the Chairperson and any other Member shall not accept any employment for a period of one year from the date on which they cease to hold such office, except with the previous approval of the Central Government.",
+ "llm_s1": 3.6557733999798074,
+ "answer2": "No, a former Board member cannot immediately join a private company after leaving office. According to Section 22(1)(a), the Chairperson and any other Member shall not accept any employment for a period of one year from the date on which they cease to hold such office, except with the previous approval of the Central Government. This restriction applies even if the resignation is due to the Member's own decision.",
+ "llm_s2": 4.541329700034112
+}

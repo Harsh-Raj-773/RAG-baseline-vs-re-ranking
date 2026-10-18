@@ -1,0 +1,15 @@
+# install the CUDA build of torch first (or drop the index URL for CPU-only):
+#   pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0
+sentence-transformers
+transformers
+accelerate
+faiss-cpu
+pymupdf
+numpy
+pandas
+matplotlib
+jupyter
+nbconvert
+nbformat
+ipykernel

@@ -1,0 +1,97 @@
+{
+ "qid": "E7",
+ "category": "exception",
+ "query": "Does a company have to tell me which other companies it shared my data with, if police asked for it?",
+ "gold": [
+  36
+ ],
+ "expected": "s.11(2): the access right does not cover sharing with an authorised Data Fiduciary on a written request for investigating offences.",
+ "candidates": [
+  {
+   "chunk_id": 36,
+   "bi_rank": 1,
+   "bi_score": 0.5691909790039062,
+   "ce_score": -4.000252723693848,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 35,
+   "bi_rank": 2,
+   "bi_score": 0.4811475872993469,
+   "ce_score": -6.743751525878906,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 20,
+   "bi_rank": 9,
+   "bi_score": 0.43773573637008667,
+   "ce_score": -8.104105949401855,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 28,
+   "bi_rank": 7,
+   "bi_score": 0.44030681252479553,
+   "ce_score": -9.874763488769531,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 10,
+   "bi_rank": 4,
+   "bi_score": 0.4447437524795532,
+   "ce_score": -9.891702651977539,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 14,
+   "bi_rank": 5,
+   "bi_score": 0.44365429878234863,
+   "ce_score": -9.917726516723633,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 18,
+   "bi_rank": 8,
+   "bi_score": 0.4389188289642334,
+   "ce_score": -10.149820327758789,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 21,
+   "bi_rank": 3,
+   "bi_score": 0.47039279341697693,
+   "ce_score": -10.170716285705566,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 19,
+   "bi_rank": 6,
+   "bi_score": 0.4424036741256714,
+   "ce_score": -10.225992202758789,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 32,
+   "bi_rank": 10,
+   "bi_score": 0.43269166350364685,
+   "ce_score": -10.541240692138672,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  36,
+  35,
+  21
+ ],
+ "rr_top": [
+  36,
+  35,
+  20
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter III (Rights And Duties Of Data Principal) - Section 11: Right to access information about personal data\n(2) Nothing contained in clause (b) or clause (c) of sub-section (1) shall apply in respect of the sharing of any personal data by the said Data Fiduciary with any other Data Fiduciary authorised by law to obtain such personal data, where such sharing is pursuant to a request made in writing by such other Data Fiduciary for the purpose of prevention or detection or investigation of offences or cyber incidents, or for prosecution or punishment of offences.\n\n[2] Chapter III (Rights And Duties Of Data Principal) - Section 11: Right to access information about personal data\n11. (1) The Data Principal shall have the right to obtain from the Data Fiduciary to whom she has previously given consent, including consent as referred to in clause (a) of section 7 (hereinafter referred to as the said Data Fiduciary), for processing of personal data, upon making to it a request in such manner as may be prescribed,— (a) a summary of personal data which is being processed by such Data Fiduciary and the processing activities undertaken by that Data Fiduciary with respect to such personal data; (b) the identities of all other Data Fiduciaries and Data Processors with whom the personal data has been shared by such Data Fiduciary, along with a description of the personal data so shared; and (c) any other information related to the personal data of such Data Principal and its processing, as may be prescribed.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 7: Certain legitimate uses\n(b) for the State and any of its instrumentalities to provide or issue to the Data Principal such subsidy, benefit, service, certificate, licence or permit as may be prescribed, where–– (i) she has previously consented to the processing of her personal data by the State or any of its instrumentalities for any subsidy, benefit, service, certificate, licence or permit; or\n\nQuestion: Does a company have to tell me which other companies it shared my data with, if police asked for it?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter III (Rights And Duties Of Data Principal) - Section 11: Right to access information about personal data\n(2) Nothing contained in clause (b) or clause (c) of sub-section (1) shall apply in respect of the sharing of any personal data by the said Data Fiduciary with any other Data Fiduciary authorised by law to obtain such personal data, where such sharing is pursuant to a request made in writing by such other Data Fiduciary for the purpose of prevention or detection or investigation of offences or cyber incidents, or for prosecution or punishment of offences.\n\n[2] Chapter III (Rights And Duties Of Data Principal) - Section 11: Right to access information about personal data\n11. (1) The Data Principal shall have the right to obtain from the Data Fiduciary to whom she has previously given consent, including consent as referred to in clause (a) of section 7 (hereinafter referred to as the said Data Fiduciary), for processing of personal data, upon making to it a request in such manner as may be prescribed,— (a) a summary of personal data which is being processed by such Data Fiduciary and the processing activities undertaken by that Data Fiduciary with respect to such personal data; (b) the identities of all other Data Fiduciaries and Data Processors with whom the personal data has been shared by such Data Fiduciary, along with a description of the personal data so shared; and (c) any other information related to the personal data of such Data Principal and its processing, as may be prescribed.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 7: Certain legitimate uses\n(a) for the specified purpose for which the Data Principal has voluntarily provided her personal data to the Data Fiduciary, and in respect of which she has not indicated to the Data Fiduciary that she does not consent to the use of her personal data. Illustrations. (I) X, an individual, makes a purchase at Y, a pharmacy. She voluntarily provides Y her personal data and requests Y to acknowledge receipt of the payment made for the purchase by sending a message to her mobile phone. Y may process the personal data of X for the purpose of sending the receipt. (II) X, an individual, electronically messages Y, a real estate broker, requesting Y to help identify a suitable rented accommodation for her and shares her personal data for this purpose. Y may process her personal data to identify and intimate to her the details of accommodation available on rent. Subsequently, X informs Y that X no longer needs help from Y. Y shall cease to process the personal data of X;\n\nQuestion: Does a company have to tell me which other companies it shared my data with, if police asked for it?\nAnswer:",
+ "answer1": "Yes, according to Section 11(2) of the Act, a company does not need to disclose to you which other companies it shared your data with if the police ask for it, as long as the sharing is done pursuant to a written request made by the police for purposes related to preventing, detecting, investigating offenses, or prosecuting or punishing offenses.",
+ "llm_s1": 4.395462600048631,
+ "answer2": "Yes, according to Section 11(2) of the Act, a company does not need to disclose to another authorized law enforcement agency the identity of other data fiduciaries or data processors to which personal data was shared, if the request is made for purposes related to preventing, detecting, investigating offenses, or prosecuting or punishing offenses.",
+ "llm_s2": 4.5276779000414535
+}

@@ -1,0 +1,9 @@
+,median ms,p95 ms,mean ms
+"query embedding (bi-encoder, GPU)",6.5,10.22,7.05
+FAISS top-10 search (CPU),0.06,0.11,0.07
+= Pipeline 1 retrieval,6.57,10.39,7.12
+"cross-encoder, 10 pairs (GPU)",20.05,30.57,21.51
+= Pipeline 2 retrieval (GPU re-rank),27.38,38.78,28.62
+"cross-encoder, 10 pairs (CPU)",200.63,230.41,202.84
+= Pipeline 2 retrieval (CPU re-rank),208.08,237.13,209.95
+"LLM answer generation (Qwen2.5-3B, GPU)",3047.1,6416.67,3359.32

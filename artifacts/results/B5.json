@@ -1,0 +1,97 @@
+{
+ "qid": "B5",
+ "category": "buried",
+ "query": "Do I have to approach the company first before complaining to the Board?",
+ "gold": [
+  38
+ ],
+ "expected": "s.13(3): yes, the grievance redressal of the Data Fiduciary must be exhausted first.",
+ "candidates": [
+  {
+   "chunk_id": 64,
+   "bi_rank": 1,
+   "bi_score": 0.5178651809692383,
+   "ce_score": -2.1685774326324463,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 61,
+   "bi_rank": 2,
+   "bi_score": 0.4783076047897339,
+   "ce_score": -6.793976306915283,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 59,
+   "bi_rank": 6,
+   "bi_score": 0.34701964259147644,
+   "ce_score": -7.868188858032227,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 69,
+   "bi_rank": 3,
+   "bi_score": 0.406887412071228,
+   "ce_score": -8.171748161315918,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 63,
+   "bi_rank": 4,
+   "bi_score": 0.3638388216495514,
+   "ce_score": -9.439702033996582,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 54,
+   "bi_rank": 7,
+   "bi_score": 0.3460884392261505,
+   "ce_score": -9.520234107971191,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 57,
+   "bi_rank": 9,
+   "bi_score": 0.30707842111587524,
+   "ce_score": -9.787066459655762,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 71,
+   "bi_rank": 10,
+   "bi_score": 0.30634891986846924,
+   "ce_score": -10.146808624267578,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 70,
+   "bi_rank": 8,
+   "bi_score": 0.3210884928703308,
+   "ce_score": -10.300716400146484,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 48,
+   "bi_rank": 5,
+   "bi_score": 0.35850557684898376,
+   "ce_score": -10.911388397216797,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  64,
+  61,
+  69
+ ],
+ "rr_top": [
+  64,
+  61,
+  59
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 28: Procedure to be followed by Board\n(12) At any stage after receipt of a complaint, if the Board is of the opinion that the complaint is false or frivolous, it may issue a warning or impose costs on the complainant.\n\n[2] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 28: Procedure to be followed by Board\n28. (1) The Board shall function as an independent body and shall, as far as practicable, function as a digital office, with the receipt of complaints and the allocation, hearing and pronouncement of decisions in respect of the same being digital by design, and adopt such techno-legal measures as may be prescribed. (2) The Board may, on receipt of an intimation or complaint or reference or directions as referred to in sub-section (1) of section 27, take action in accordance with the provisions of this Act and the rules made thereunder. (3) The Board shall determine whether there are sufficient grounds to proceed with an inquiry. (4) In case the Board determines that there are insufficient grounds, it may, for reasons to be recorded in writing, close the proceedings.\n\n[3] Chapter VII (Appeal And Alternate Dispute Resolution) - Section 31: Alternate dispute resolution\n31. If the Board is of the opinion that any complaint may be resolved by mediation, it may direct the parties concerned to attempt resolution of the dispute through such mediation by such mediator as the parties may mutually agree upon, or as provided for under any law for the time being in force in India.\n\nQuestion: Do I have to approach the company first before complaining to the Board?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 28: Procedure to be followed by Board\n(12) At any stage after receipt of a complaint, if the Board is of the opinion that the complaint is false or frivolous, it may issue a warning or impose costs on the complainant.\n\n[2] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 28: Procedure to be followed by Board\n28. (1) The Board shall function as an independent body and shall, as far as practicable, function as a digital office, with the receipt of complaints and the allocation, hearing and pronouncement of decisions in respect of the same being digital by design, and adopt such techno-legal measures as may be prescribed. (2) The Board may, on receipt of an intimation or complaint or reference or directions as referred to in sub-section (1) of section 27, take action in accordance with the provisions of this Act and the rules made thereunder. (3) The Board shall determine whether there are sufficient grounds to proceed with an inquiry. (4) In case the Board determines that there are insufficient grounds, it may, for reasons to be recorded in writing, close the proceedings.\n\n[3] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 27: Powers and functions of Board\n(c) on a complaint made by a Data Principal in respect of a breach in observance by a Consent Manager of its obligations in relation to her personal data, to inquire into such breach and impose penalty as provided in this Act; (d) on receipt of an intimation of breach of any condition of registration of a Consent Manager, to inquire into such breach and impose penalty as provided in this Act; and (e) on a reference made by the Central Government in respect of the breach in observance of the provisions of sub-section (2) of section 37 by an intermediary, to inquire into such breach and impose penalty as provided in this Act. (2) The Board may, for the effective discharge of its functions under the provisions of this Act, after giving the person concerned an opportunity of being heard and after recording reasons in writing, issue such directions as it may consider necessary to such person, who shall be bound to comply with the same.\n\nQuestion: Do I have to approach the company first before complaining to the Board?\nAnswer:",
+ "answer1": "No, according to Section 28(1), the Board can receive complaints and take action even if they determine there are insufficient grounds to proceed with an inquiry. This means you do not have to approach the company first; you can directly complain to the Board.",
+ "llm_s1": 2.9204923000652343,
+ "answer2": "No, according to Section 27(2), the Board can receive complaints directly from the Data Principal without the need to approach the company first.",
+ "llm_s2": 1.8531560000265017
+}

@@ -1,0 +1,97 @@
+{
+ "qid": "B2",
+ "category": "buried",
+ "query": "What can the Board do to someone who files a frivolous complaint?",
+ "gold": [
+  64
+ ],
+ "expected": "s.28(12): issue a warning or impose costs on the complainant.",
+ "candidates": [
+  {
+   "chunk_id": 64,
+   "bi_rank": 1,
+   "bi_score": 0.5686111450195312,
+   "ce_score": 5.397635459899902,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 69,
+   "bi_rank": 3,
+   "bi_score": 0.5084871649742126,
+   "ce_score": -2.052103042602539,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 59,
+   "bi_rank": 4,
+   "bi_score": 0.4982973635196686,
+   "ce_score": -2.8633179664611816,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 61,
+   "bi_rank": 2,
+   "bi_score": 0.5498532652854919,
+   "ce_score": -5.091913223266602,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 63,
+   "bi_rank": 5,
+   "bi_score": 0.45559191703796387,
+   "ce_score": -6.232540130615234,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 71,
+   "bi_rank": 9,
+   "bi_score": 0.40981626510620117,
+   "ce_score": -6.564737796783447,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 72,
+   "bi_rank": 8,
+   "bi_score": 0.4106766879558563,
+   "ce_score": -6.839001655578613,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 62,
+   "bi_rank": 7,
+   "bi_score": 0.41440242528915405,
+   "ce_score": -7.103097438812256,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 57,
+   "bi_rank": 10,
+   "bi_score": 0.4078226685523987,
+   "ce_score": -7.672208786010742,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 11,
+   "bi_rank": 6,
+   "bi_score": 0.41846996545791626,
+   "ce_score": -8.985824584960938,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  64,
+  61,
+  69
+ ],
+ "rr_top": [
+  64,
+  69,
+  59
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 28: Procedure to be followed by Board\n(12) At any stage after receipt of a complaint, if the Board is of the opinion that the complaint is false or frivolous, it may issue a warning or impose costs on the complainant.\n\n[2] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 28: Procedure to be followed by Board\n28. (1) The Board shall function as an independent body and shall, as far as practicable, function as a digital office, with the receipt of complaints and the allocation, hearing and pronouncement of decisions in respect of the same being digital by design, and adopt such techno-legal measures as may be prescribed. (2) The Board may, on receipt of an intimation or complaint or reference or directions as referred to in sub-section (1) of section 27, take action in accordance with the provisions of this Act and the rules made thereunder. (3) The Board shall determine whether there are sufficient grounds to proceed with an inquiry. (4) In case the Board determines that there are insufficient grounds, it may, for reasons to be recorded in writing, close the proceedings.\n\n[3] Chapter VII (Appeal And Alternate Dispute Resolution) - Section 31: Alternate dispute resolution\n31. If the Board is of the opinion that any complaint may be resolved by mediation, it may direct the parties concerned to attempt resolution of the dispute through such mediation by such mediator as the parties may mutually agree upon, or as provided for under any law for the time being in force in India.\n\nQuestion: What can the Board do to someone who files a frivolous complaint?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 28: Procedure to be followed by Board\n(12) At any stage after receipt of a complaint, if the Board is of the opinion that the complaint is false or frivolous, it may issue a warning or impose costs on the complainant.\n\n[2] Chapter VII (Appeal And Alternate Dispute Resolution) - Section 31: Alternate dispute resolution\n31. If the Board is of the opinion that any complaint may be resolved by mediation, it may direct the parties concerned to attempt resolution of the dispute through such mediation by such mediator as the parties may mutually agree upon, or as provided for under any law for the time being in force in India.\n\n[3] Chapter VI (Powers, Functions And Procedure To Be Followed By Board) - Section 27: Powers and functions of Board\n(c) on a complaint made by a Data Principal in respect of a breach in observance by a Consent Manager of its obligations in relation to her personal data, to inquire into such breach and impose penalty as provided in this Act; (d) on receipt of an intimation of breach of any condition of registration of a Consent Manager, to inquire into such breach and impose penalty as provided in this Act; and (e) on a reference made by the Central Government in respect of the breach in observance of the provisions of sub-section (2) of section 37 by an intermediary, to inquire into such breach and impose penalty as provided in this Act. (2) The Board may, for the effective discharge of its functions under the provisions of this Act, after giving the person concerned an opportunity of being heard and after recording reasons in writing, issue such directions as it may consider necessary to such person, who shall be bound to comply with the same.\n\nQuestion: What can the Board do to someone who files a frivolous complaint?\nAnswer:",
+ "answer1": "The Board can issue a warning or impose costs on the complainant if they determine the complaint to be false or frivolous. This is outlined in Section 28(12) of Chapter VI.",
+ "llm_s1": 2.2240623000543565,
+ "answer2": "The Board can issue a warning or impose costs on the complainant if they determine that the complaint is false or frivolous. This is outlined in Section 28 of Chapter VI, which specifies the procedure to be followed by the Board.",
+ "llm_s2": 2.580248499987647
+}

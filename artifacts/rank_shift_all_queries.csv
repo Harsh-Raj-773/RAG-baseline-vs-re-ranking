@@ -1,0 +1,25 @@
+qid,category,gold,base_rank,rerank_rank,shift,outcome
+K1,keyword trap,[90],1,1,#1 -> #1,both OK
+K2,keyword trap,[8],1,1,#1 -> #1,both OK
+K3,keyword trap,"[77, 78]",1,1,#1 -> #1,both OK
+K4,keyword trap,[27],1,1,#1 -> #1,both OK
+K5,keyword trap,[74],2,3,#2 -> #3,both OK
+K6,keyword trap,[2],7,1,#7 -> #1,FIXED by re-ranking
+E1,exception,[46],2,2,#2 -> #2,both OK
+E2,exception,[37],2,1,#2 -> #1,both OK
+E3,exception,[44],2,1,#2 -> #1,both OK
+E4,exception,[53],1,1,#1 -> #1,both OK
+E5,exception,[65],1,1,#1 -> #1,both OK
+E6,exception,[45],4,1,#4 -> #1,FIXED by re-ranking
+E7,exception,[36],1,1,#1 -> #1,both OK
+N1,negation,[30],1,1,#1 -> #1,both OK
+N2,negation,[14],1,1,#1 -> #1,both OK
+N3,negation,[63],4,1,#4 -> #1,FIXED by re-ranking
+N4,negation,[16],1,1,#1 -> #1,both OK
+N5,negation,[40],2,1,#2 -> #1,both OK
+N6,negation,[80],11,11,#>10 -> #>10,out of reach (not in top 10)
+B1,buried,[91],11,11,#>10 -> #>10,out of reach (not in top 10)
+B2,buried,[64],1,1,#1 -> #1,both OK
+B3,buried,[39],11,11,#>10 -> #>10,out of reach (not in top 10)
+B4,buried,[50],11,11,#>10 -> #>10,out of reach (not in top 10)
+B5,buried,[38],11,11,#>10 -> #>10,out of reach (not in top 10)

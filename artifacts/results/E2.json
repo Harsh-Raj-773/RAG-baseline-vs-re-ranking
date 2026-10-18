@@ -1,0 +1,97 @@
+{
+ "qid": "E2",
+ "category": "exception",
+ "query": "Must a company erase my personal data when I ask it to?",
+ "gold": [
+  37
+ ],
+ "expected": "s.12(3): yes, unless retention is necessary for the specified purpose or for compliance with law.",
+ "candidates": [
+  {
+   "chunk_id": 37,
+   "bi_rank": 2,
+   "bi_score": 0.6213933229446411,
+   "ce_score": 0.10129541903734207,
+   "ce_rank": 1
+  },
+  {
+   "chunk_id": 26,
+   "bi_rank": 1,
+   "bi_score": 0.6408827304840088,
+   "ce_score": 0.08290798962116241,
+   "ce_rank": 2
+  },
+  {
+   "chunk_id": 27,
+   "bi_rank": 3,
+   "bi_score": 0.6127285957336426,
+   "ce_score": -0.0583813339471817,
+   "ce_rank": 3
+  },
+  {
+   "chunk_id": 17,
+   "bi_rank": 8,
+   "bi_score": 0.5180314183235168,
+   "ce_score": -4.394778728485107,
+   "ce_rank": 4
+  },
+  {
+   "chunk_id": 12,
+   "bi_rank": 9,
+   "bi_score": 0.5089029669761658,
+   "ce_score": -4.7851033210754395,
+   "ce_rank": 5
+  },
+  {
+   "chunk_id": 20,
+   "bi_rank": 5,
+   "bi_score": 0.535707414150238,
+   "ce_score": -5.829362392425537,
+   "ce_rank": 6
+  },
+  {
+   "chunk_id": 36,
+   "bi_rank": 4,
+   "bi_score": 0.5472288131713867,
+   "ce_score": -6.6191911697387695,
+   "ce_rank": 7
+  },
+  {
+   "chunk_id": 10,
+   "bi_rank": 6,
+   "bi_score": 0.5307214856147766,
+   "ce_score": -6.803466796875,
+   "ce_rank": 8
+  },
+  {
+   "chunk_id": 40,
+   "bi_rank": 7,
+   "bi_score": 0.528340220451355,
+   "ce_score": -7.758208274841309,
+   "ce_rank": 9
+  },
+  {
+   "chunk_id": 19,
+   "bi_rank": 10,
+   "bi_score": 0.5065780878067017,
+   "ce_score": -8.262681007385254,
+   "ce_rank": 10
+  }
+ ],
+ "base_top": [
+  26,
+  37,
+  27
+ ],
+ "rr_top": [
+  37,
+  26,
+  27
+ ],
+ "prompt1": "Context excerpts:\n[1] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(5) A Data Fiduciary shall protect personal data in its possession or under its control, including in respect of any processing undertaken by it or on its behalf by a Data Processor, by taking reasonable security safeguards to prevent personal data breach. (6) In the event of a personal data breach, the Data Fiduciary shall give the Board and each affected Data Principal, intimation of such breach in such form and manner as may be prescribed. (7) A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— (a) erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and\n\n[2] Chapter III (Rights And Duties Of Data Principal) - Section 12: Right to correction and erasure of personal data\n12. (1) A Data Principal shall have the right to correction, completion, updating and erasure of her personal data for the processing of which she has previously given consent, including consent as referred to in clause (a) of section 7, in accordance with any requirement or procedure under any law for the time being in force. (2) A Data Fiduciary shall, upon receiving a request for correction, completion or updating from a Data Principal,— (a) correct the inaccurate or misleading personal data; (b) complete the incomplete personal data; and (c) update the personal data. (3) A Data Principal shall make a request in such manner as may be prescribed to the Data Fiduciary for erasure of her personal data, and upon receipt of such a request, the Data Fiduciary shall erase her personal data unless retention of the same is necessary for the specified purpose or for compliance with any law for the time being in force.\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(b) cause its Data Processor to erase any personal data that was made available by the Data Fiduciary for processing to such Data Processor. Illustrations. (I) X, an individual, registers herself on an online marketplace operated by Y, an e-commerce service provider. X gives her consent to Y for the processing of her personal data for selling her used car. The online marketplace helps conclude the sale. Y shall no longer retain her personal data. (II) X, an individual, decides to close her savings account with Y, a bank. Y is required by law applicable to banks to maintain the record of the identity of its clients for a period of ten years beyond closing of accounts. Since retention is necessary for compliance with law, Y shall retain X’s personal data for the said period.\n\nQuestion: Must a company erase my personal data when I ask it to?\nAnswer:",
+ "prompt2": "Context excerpts:\n[1] Chapter III (Rights And Duties Of Data Principal) - Section 12: Right to correction and erasure of personal data\n12. (1) A Data Principal shall have the right to correction, completion, updating and erasure of her personal data for the processing of which she has previously given consent, including consent as referred to in clause (a) of section 7, in accordance with any requirement or procedure under any law for the time being in force. (2) A Data Fiduciary shall, upon receiving a request for correction, completion or updating from a Data Principal,— (a) correct the inaccurate or misleading personal data; (b) complete the incomplete personal data; and (c) update the personal data. (3) A Data Principal shall make a request in such manner as may be prescribed to the Data Fiduciary for erasure of her personal data, and upon receipt of such a request, the Data Fiduciary shall erase her personal data unless retention of the same is necessary for the specified purpose or for compliance with any law for the time being in force.\n\n[2] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(5) A Data Fiduciary shall protect personal data in its possession or under its control, including in respect of any processing undertaken by it or on its behalf by a Data Processor, by taking reasonable security safeguards to prevent personal data breach. (6) In the event of a personal data breach, the Data Fiduciary shall give the Board and each affected Data Principal, intimation of such breach in such form and manner as may be prescribed. (7) A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— (a) erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and\n\n[3] Chapter II (Obligations Of Data Fiduciary) - Section 8: General obligations of Data Fiduciary\n(b) cause its Data Processor to erase any personal data that was made available by the Data Fiduciary for processing to such Data Processor. Illustrations. (I) X, an individual, registers herself on an online marketplace operated by Y, an e-commerce service provider. X gives her consent to Y for the processing of her personal data for selling her used car. The online marketplace helps conclude the sale. Y shall no longer retain her personal data. (II) X, an individual, decides to close her savings account with Y, a bank. Y is required by law applicable to banks to maintain the record of the identity of its clients for a period of ten years beyond closing of accounts. Since retention is necessary for compliance with law, Y shall retain X’s personal data for the said period.\n\nQuestion: Must a company erase my personal data when I ask it to?\nAnswer:",
+ "answer1": "Yes, according to Section 12(3), if a Data Principal makes a request in the manner prescribed, the Data Fiduciary must erase their personal data unless retention is necessary for the specified purpose or for compliance with any law for the time being in force.",
+ "llm_s1": 3.1070787999778986,
+ "answer2": "Yes, according to Section 12(3), if a Data Principal makes a request in the manner prescribed, the Data Fiduciary must erase the personal data unless retention is necessary for compliance with any law for the time being in force.",
+ "llm_s2": 3.057039999985136
+}

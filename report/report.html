@@ -35,6 +35,7 @@
   table, .fig, .row { break-inside: avoid; }
   table.split { break-inside: auto; }
   tr { break-inside: avoid; }
+  .q { margin: 0 0 5px; padding: 3px 8px; border-left: 3px solid var(--head); background: #eef2f7; font-style: italic; color: #2a3b52; }
   .small { font-size: 8.5pt; color: var(--muted); }
   code { font-family: Consolas, monospace; font-size: 8.6pt; }
 </style>
@@ -43,7 +44,8 @@
 
 <h1>RAG on India’s DPDP Act, 2023</h1>
 <p class="sub">Bi-Encoder Baseline vs. Cross-Encoder Re-Ranking</p>
-<p class="meta">Harsh Raj &nbsp;|&nbsp; 19 October 2026 &nbsp;|&nbsp; Code: github.com/Harsh-Raj-773/RAG-baseline-vs-re-ranking</p>
+<p class="meta">Harsh Raj &nbsp;|&nbsp; 19 October 2026</p>
+<p class="meta" style="margin-top:-8px"><b>GitHub (code, notebook, results):</b> <a href="https://github.com/Harsh-Raj-773/RAG-baseline-vs-re-ranking">https://github.com/Harsh-Raj-773/RAG-baseline-vs-re-ranking</a></p>
 
 <h2>1. Document and experimental setup</h2>
 <p>I used the official 21-page Gazette PDF of India’s <b>Digital Personal Data Protection (DPDP) Act, 2023</b>. It is a good stress test for
@@ -61,7 +63,8 @@ corpus, the same top-10 candidate list, the same generator and the same prompt, 
 <tr><td>Evaluation set</td><td>24 queries in plain user language across four failure types (6 keyword trap, 7 exception, 6 negation, 5 buried/cross-reference), each with a manually identified gold chunk and the clause a correct answer must contain</td></tr>
 </table>
 
-<h2>2. Architecture comparison: bi-encoder vs. cross-encoder</h2>
+<h2>2. Architecture Comparison</h2>
+<p class="q">Q1. Briefly explain the core difference between a Bi-Encoder (independent embeddings, cosine similarity) and a Cross-Encoder (joint self-attention across tokens).</p>
 <p>A <b>bi-encoder</b> encodes the query and each chunk <i>separately</i> into one vector each, and relevance is the cosine similarity between them.
 Chunk vectors are computed once, offline, so at query time only the query is encoded and an index lookup is done. This makes it cheap enough to search the whole corpus.
 The weakness is the compression: a whole passage becomes a single point, so two passages on the same subject land close together even if only one states
@@ -105,7 +108,8 @@ queries instead of 66.7%. Recall@10 is identical by construction, since re-ranki
 By category, Hit@3 rose from 0.83 to 1.00 for keyword traps, 0.86 to 1.00 for exceptions and 0.67 to 0.83 for negations, but stayed at 0.20 for buried/cross-reference
 queries, where the problem is first-stage recall rather than ordering.</p>
 
-<h2>4. Rank-shift and failure-mode analysis</h2>
+<h2>4. Qualitative &amp; Rank Shift Analysis</h2>
+<p class="q">Q2. Document the rank changes for the failure queries, and compare LLM Answer 1 vs. Answer 2: did the baseline generate a hallucination, omit an essential clause, or misstate a rule because the critical chunk sat outside the top 3?</p>
 <div class="fig"><img src="../artifacts/figures/bump_charts.png" style="width:92%"></div>
 <p class="cap">Figure 1. Top-10 candidates before (left) and after (right) cross-encoder scoring; the gold chunk is green, and the shaded band is the top 3 sent to the LLM.</p>
 
@@ -152,7 +156,9 @@ guarantee zero harm at the answer level.</p>
 B1 is a two-hop case: impersonation is a duty in s.15, but its Rs 10,000 penalty is a Schedule row that says only <q>duties under section 15</q>, with no
 word in common with the query. When I widened the candidate pool, re-ranking the top 30 recovered B3 (rank 11 → #1) and B4 (rank 29 → #2), while B1, B5 and N6 stayed out of reach.</p>
 
-<h2>5. Latency profiling</h2>
+<div style="break-inside: avoid">
+<h2>5. Latency Profiling</h2>
+<p class="q">Q3. Record and tabulate the runtime of the baseline retrieval vs. the re-ranking pipeline.</p>
 <table style="width:72%">
 <tr><th>Stage (median of 24 queries × 5 runs)</th><th class="num">Median</th><th class="num">p95</th></tr>
 <tr><td>Query embedding (GPU) + FAISS search</td><td class="num">6.6 ms</td><td class="num">10.4 ms</td></tr>
@@ -164,11 +170,13 @@ word in common with the query. When I widened the candidate pool, re-ranking the
 <tr><td>LLM generation (same for both)</td><td class="num">3,047 ms</td><td class="num">6,417 ms</td></tr>
 <tr><td><b>End-to-end: Pipeline 1 / Pipeline 2</b></td><td class="num" colspan="2"><b>3,054 / 3,075 ms</b></td></tr>
 </table>
+</div>
 <p>Re-ranking makes retrieval about 4× slower on the GPU (+20.8 ms) and about 30× slower on the CPU (+201 ms). In absolute terms the GPU overhead is only
 0.7% of end-to-end time, because generation dominates, so here the accuracy gain costs almost nothing. On a CPU-only deployment, re-ranking would be a noticeable
 fraction of a second per query. Timings are from one laptop GPU after warm-up; GPU and CPU runs were timed in separate loops because interleaving them let the GPU clock down.</p>
 
-<h2>6. Scaling: why not cross-encode the whole collection from the start?</h2>
+<h2>6. Scaling Question</h2>
+<p class="q">Q4. Why do we not simply run a Cross-Encoder across the entire document collection from the very start?</p>
 <div class="row">
 <div style="flex:1.1">
 <p>Because the cross-encoder must see the query and the chunk together, its cost is <b>one forward pass per chunk, paid again for every new query</b>, and nothing

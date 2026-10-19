@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAG Baseline vs Re-Ranking</title>
+<style>
+  @page { size: A4; margin: 15mm 16mm 15mm 16mm; }
+  :root { --ink:#1b1b1b; --muted:#555; --head:#1f3a5f; --rule:#d5dbe3; --th:#1f3a5f; --zebra:#f4f6f9; }
+  html { color-scheme: light; }
+  body { font-family: "Segoe UI", Arial, sans-serif; font-size: 9.6pt; line-height: 1.38; color: var(--ink); background:#fff; margin:0; }
+  h1 { font-size: 18pt; color: var(--head); text-align:center; margin: 0 0 2px; }
+  .sub { text-align:center; color: var(--head); font-size: 10.5pt; margin:0; }
+  .meta { text-align:center; color: var(--muted); font-size: 9pt; margin: 2px 0 10px; }
+  h2 { font-size: 12pt; color: var(--head); margin: 11px 0 4px; border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+  h3 { font-size: 10pt; color: var(--head); margin: 8px 0 3px; }
+  p { margin: 0 0 5px; text-align: justify; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0 7px; font-size: 8.7pt; }
+  th { background: var(--th); color: #fff; text-align: left; padding: 3px 6px; font-weight: 600; }
+  td { padding: 3px 6px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--zebra); }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  .fig { text-align: center; margin: 4px 0 6px; }
+  .fig img { max-width: 100%; }
+  .cap { font-size: 8.3pt; color: var(--muted); text-align: center; margin: 1px 0 6px; }
+  .row { display: flex; gap: 10px; align-items: flex-start; }
+  .row > div { flex: 1; }
+  ul { margin: 0 0 5px 16px; padding: 0; }
+  li { margin-bottom: 2px; }
+  .ok { color: #11713f; font-weight: 600; }
+  .bad { color: #b3261e; font-weight: 600; }
+  .mid { color: #8a5a00; font-weight: 600; }
+  q { font-style: italic; }
+  .pb { break-before: page; }
+  h2, h3 { break-after: avoid; }
+  table, .fig, .row { break-inside: avoid; }
+  table.split { break-inside: auto; }
+  tr { break-inside: avoid; }
+  .small { font-size: 8.5pt; color: var(--muted); }
+  code { font-family: Consolas, monospace; font-size: 8.6pt; }
+</style>
+</head>
+<body>
+
+<h1>RAG on India’s DPDP Act, 2023</h1>
+<p class="sub">Bi-Encoder Baseline vs. Cross-Encoder Re-Ranking</p>
+<p class="meta">Harsh Raj &nbsp;|&nbsp; 19 October 2026 &nbsp;|&nbsp; Code: github.com/Harsh-Raj-773/RAG-baseline-vs-re-ranking</p>
+
+<h2>1. Document and experimental setup</h2>
+<p>I used the official 21-page Gazette PDF of India’s <b>Digital Personal Data Protection (DPDP) Act, 2023</b>. It is a good stress test for
+retrieval: general duties are qualified by exemptions in other sections (Section 17), penalties sit in a separate Schedule, and many rules are
+phrased as negations (<q>shall not</q>, <q>nothing contained in</q>). A passage about the right topic often does not contain the rule that decides the answer.</p>
+<p>The PDF was parsed block by block with coordinates: running headers were removed, the margin notes (section titles) were attached to their
+sections, and the three-column penalty Schedule was rebuilt row by row. Chunks never cross a section boundary and are split at numbered
+sub-sections (max 170 words), giving a frozen corpus of <b>92 chunks</b>, each prefixed with its chapter and section title. Both pipelines use this exact
+corpus, the same top-10 candidate list, the same generator and the same prompt, so any difference between Answer 1 and Answer 2 comes only from the ordering of the final three chunks.</p>
+<table>
+<tr><th style="width:24%">Component</th><th>Implementation</th></tr>
+<tr><td>Bi-encoder + index</td><td><code>all-MiniLM-L6-v2</code>, L2-normalised vectors in FAISS <code>IndexFlatIP</code> (inner product = cosine); top 10 retrieved</td></tr>
+<tr><td>Cross-encoder</td><td><code>cross-encoder/ms-marco-MiniLM-L-6-v2</code>; scores all 10 (query, chunk) pairs, re-sorted descending</td></tr>
+<tr><td>Generator</td><td><code>Qwen2.5-3B-Instruct</code>, local GPU (RTX 4060 Laptop), greedy decoding; prompt: answer only from the excerpts, cite sections, otherwise say the context does not answer</td></tr>
+<tr><td>Evaluation set</td><td>24 queries in plain user language across four failure types (6 keyword trap, 7 exception, 6 negation, 5 buried/cross-reference), each with a manually identified gold chunk and the clause a correct answer must contain</td></tr>
+</table>
+
+<h2>2. Architecture comparison: bi-encoder vs. cross-encoder</h2>
+<p>A <b>bi-encoder</b> encodes the query and each chunk <i>separately</i> into one vector each, and relevance is the cosine similarity between them.
+Chunk vectors are computed once, offline, so at query time only the query is encoded and an index lookup is done. This makes it cheap enough to search the whole corpus.
+The weakness is the compression: a whole passage becomes a single point, so two passages on the same subject land close together even if only one states
+the exception, prohibition or number being asked about. Small but decisive words such as <q>not</q>, <q>except</q> or <q>unless</q> barely move the vector.</p>
+<p>A <b>cross-encoder</b> takes the query and one chunk <i>together</i> as a single input (<code>[CLS] query [SEP] chunk [SEP]</code>). Self-attention lets every
+query token attend to every chunk token, so the model can match <q>prohibited</q> against <q>shall not</q> or <q>fine</q> against <q>penalty</q>, and it outputs one relevance score for the pair.
+It is more precise, but nothing can be pre-computed: every (query, chunk) pair needs its own forward pass at query time. The two are therefore used in
+sequence: the bi-encoder gives recall over the whole corpus, and the cross-encoder gives precision on a short list. The re-ranker can only re-order what the first stage retrieved.</p>
+<table>
+<tr><th style="width:22%"></th><th>Bi-encoder (<code>all-MiniLM-L6-v2</code>)</th><th>Cross-encoder (<code>ms-marco-MiniLM-L-6-v2</code>)</th></tr>
+<tr><td>Input</td><td>query and chunk encoded separately</td><td>query and chunk in one sequence</td></tr>
+<tr><td>Where they interact</td><td>only at the end, through the cosine of two 384-d vectors</td><td>in every layer, through self-attention across all tokens</td></tr>
+<tr><td>Pre-computable</td><td>yes: chunk vectors built once (446 ms for all 92 chunks)</td><td>no: a new forward pass for every (query, chunk) pair</td></tr>
+<tr><td>Work per query</td><td>1 encoding + index search</td><td>1 forward pass per candidate</td></tr>
+<tr><td>Good at</td><td>finding the right <i>topic</i> across the whole corpus</td><td>judging whether a passage actually <i>answers</i> the question</td></tr>
+</table>
+
+<h2>3. Retrieval results on all 24 queries</h2>
+<div class="row">
+<div>
+<table>
+<tr><th>Metric</th><th class="num">Baseline</th><th class="num">Re-ranked</th><th class="num">Change</th></tr>
+<tr><td>Hit@1</td><td class="num">0.458</td><td class="num">0.708</td><td class="num">+0.250</td></tr>
+<tr><td>Hit@3 (gold chunk reaches the LLM)</td><td class="num">0.667</td><td class="num">0.792</td><td class="num">+0.125</td></tr>
+<tr><td>MRR@10</td><td class="num">0.589</td><td class="num">0.743</td><td class="num">+0.154</td></tr>
+<tr><td>Recall@10</td><td class="num">0.792</td><td class="num">0.792</td><td class="num">0</td></tr>
+</table>
+</div>
+<div>
+<table>
+<tr><th>Outcome (gold-chunk rank)</th><th class="num">Queries</th></tr>
+<tr><td>Fixed: outside top 3 → inside top 3</td><td class="num">3</td></tr>
+<tr><td>Hurt: inside top 3 → outside</td><td class="num">0</td></tr>
+<tr><td>Both already in top 3</td><td class="num">16</td></tr>
+<tr><td>Out of reach: not in the top 10 at all</td><td class="num">5</td></tr>
+</table>
+</div>
+</div>
+<p>Hit@3 is the metric that matters most here, because only three chunks reach the LLM: after re-ranking, the gold evidence is in the context for 79.2% of
+queries instead of 66.7%. Recall@10 is identical by construction, since re-ranking changes the order of the ten candidates but not which ten they are.
+By category, Hit@3 rose from 0.83 to 1.00 for keyword traps, 0.86 to 1.00 for exceptions and 0.67 to 0.83 for negations, but stayed at 0.20 for buried/cross-reference
+queries, where the problem is first-stage recall rather than ordering.</p>
+
+<h2>4. Rank-shift and failure-mode analysis</h2>
+<div class="fig"><img src="../artifacts/figures/bump_charts.png" style="width:92%"></div>
+<p class="cap">Figure 1. Top-10 candidates before (left) and after (right) cross-encoder scoring; the gold chunk is green, and the shaded band is the top 3 sent to the LLM.</p>
+
+<table class="split">
+<tr><th style="width:17%">Query (type)</th><th style="width:9%">Gold rank</th><th style="width:28%">Why the baseline missed it</th><th>Answer 1 (baseline) vs. Answer 2 (re-ranked)</th></tr>
+<tr><td><b>N3</b> (negation)<br><q>What is the Board prohibited from doing when it inquires into a company?</q></td><td>chunk 63<br>#4 → #1</td>
+<td>The baseline top 3 were s.28(1), s.27 and s.18, which describe what the Board <i>can</i> do. Same topic, so their vectors are close; the <q>shall not</q> in s.28(8) has little effect on the embedding.</td>
+<td>A1: <span class="mid">refusal</span> (<q>the provided context does not answer this</q>).<br>A2: <span class="ok">correct</span>: may not prevent access to premises or seize equipment that affects day-to-day functioning, s.28(8).</td></tr>
+<tr><td><b>E6</b> (exception)<br><q>Does the Act apply to personal data used for research or statistics?</q></td><td>chunk 45<br>#4 → #1</td>
+<td>The general rules (s.3 <i>Application of Act</i>, s.4 <i>Grounds for processing</i>, s.7) share the words <q>Act</q>, <q>apply</q>, <q>personal data</q>; the exemption in s.17(2)(b) is phrased differently.</td>
+<td>A1: <span class="mid">refusal</span>, speculates that research <q>could fall under legitimate uses</q>.<br>A2: <span class="mid">partial</span>: cites the s.17(2)(b) exemption correctly but opens with <q>Yes, the Act applies…</q>. The polarity is inverted even though the right clause was in the context.</td></tr>
+<tr><td><b>K6</b> (keyword trap)<br><q>From what age is a person no longer treated as a child?</q></td><td>chunk 2<br>#7 → #1</td>
+<td>s.9(5) (the government may notify an <q>age above which</q> a fiduciary is exempt) matches <q>age</q> + <q>child</q> lexically; the real answer is the definition in s.2(f), inside a dense chunk of seven definitions.</td>
+<td>A1: <span class="mid">refusal</span>.<br>A2: <span class="bad">wrong</span>: still answers from the s.9(5) distractor and says the Act sets no age, although <q>has not completed eighteen years</q> was in its context.</td></tr>
+<tr><td><b>K1</b> (keyword trap)<br><q>Maximum fine if a company fails to protect user data from a breach?</q></td><td>chunk 90<br>#1 → #1</td>
+<td>Gold chunk ranked first in both; the other two chunks differ (baseline: s.33(2) penalty factors + s.8(5); re-ranked: s.8(5) + s.27 Board powers).</td>
+<td>A1: <span class="bad">wrong</span>: <q>two hundred crore</q> (Schedule row 2, breach <i>notification</i>).<br>A2: <span class="ok">correct</span>: Rs 250 crore (row 1, security safeguards under s.8(5)).</td></tr>
+<tr><td><b>B5</b> (buried)<br><q>Do I have to approach the company first before complaining to the Board?</q></td><td>chunk 38<br>#31 (not in top 10)</td>
+<td>The answer is in s.13(3) (grievance redressal), but the query’s words all point to the Board’s complaint procedure (s.27, s.28, s.31).</td>
+<td>A1 and A2: <span class="bad">both hallucinate</span> <q>No, you can directly complain to the Board</q>. s.13(3) requires exhausting the company’s grievance mechanism first.</td></tr>
+</table>
+
+<p><b>Did the baseline hallucinate, omit a clause, or misstate a rule?</b> All three occurred. In N3 and E6 the deciding clause sat outside the
+baseline top 3, so Answer 1 omitted it and refused. In K1 the baseline misstated a numeric rule. In B5 a missing chunk led to a confident
+hallucination that reverses the law. Re-ranking fixed the first two kinds when the evidence was among the ten candidates.
+The prompt shaped how failures appeared: because it tells the model to say when the excerpts do not answer the question, most retrieval misses
+showed up as refusals (6 for the baseline) rather than invented answers. Without that instruction the model would likely have filled the gaps from
+its own knowledge, and the retrieval failure would have been hidden behind a confident answer. B5 shows that this safeguard is not complete: the wrong
+chunks looked relevant enough that the model answered anyway.</p>
+
+<p><b>Retrieval quality is not the same as answer quality.</b> I labelled all 48 answers manually against the expected clause:</p>
+<table>
+<tr><th>Answer label</th><th class="num">correct</th><th class="num">partial</th><th class="num">refusal</th><th class="num">wrong</th></tr>
+<tr><td>Answer 1 (baseline)</td><td class="num">12</td><td class="num">4</td><td class="num">6</td><td class="num">2</td></tr>
+<tr><td>Answer 2 (re-ranked)</td><td class="num">11</td><td class="num">8</td><td class="num">3</td><td class="num">2</td></tr>
+</table>
+<p>Re-ranking reduced refusals (6 → 3) and improved four answers (N3, K1, E1, E6), but five got worse (K4, E2, E7, N1 from correct to partial; K6 from refusal to wrong),
+so the number of fully correct answers did not increase. In four of those five the gold chunk was rank #1 in <i>both</i> pipelines; only the other two
+chunks in the context changed, and the small 3B model drifted toward them. Two lessons follow. Getting the right chunk into the context is necessary but not
+sufficient: E6 and K6 show the generator misreading an exemption and a definition that it had. And the rank-level <q>zero hurt</q> result does not
+guarantee zero harm at the answer level.</p>
+
+<p><b>The recall ceiling.</b> For 5 of 24 queries the gold chunk was never in the top 10 (bi-encoder ranks 11, 29, 31, 50 and 53), so both pipelines failed together.
+B1 is a two-hop case: impersonation is a duty in s.15, but its Rs 10,000 penalty is a Schedule row that says only <q>duties under section 15</q>, with no
+word in common with the query. When I widened the candidate pool, re-ranking the top 30 recovered B3 (rank 11 → #1) and B4 (rank 29 → #2), while B1, B5 and N6 stayed out of reach.</p>
+
+<h2>5. Latency profiling</h2>
+<table style="width:72%">
+<tr><th>Stage (median of 24 queries × 5 runs)</th><th class="num">Median</th><th class="num">p95</th></tr>
+<tr><td>Query embedding (GPU) + FAISS search</td><td class="num">6.6 ms</td><td class="num">10.4 ms</td></tr>
+<tr><td>Cross-encoder, 10 pairs (GPU)</td><td class="num">20.1 ms</td><td class="num">30.6 ms</td></tr>
+<tr><td>Cross-encoder, 10 pairs (CPU)</td><td class="num">200.6 ms</td><td class="num">230.4 ms</td></tr>
+<tr><td><b>Pipeline 1 retrieval</b></td><td class="num"><b>6.6 ms</b></td><td class="num">10.4 ms</td></tr>
+<tr><td><b>Pipeline 2 retrieval (GPU re-rank)</b></td><td class="num"><b>27.4 ms</b></td><td class="num">38.8 ms</td></tr>
+<tr><td>Pipeline 2 retrieval (CPU re-rank)</td><td class="num">208.1 ms</td><td class="num">237.1 ms</td></tr>
+<tr><td>LLM generation (same for both)</td><td class="num">3,047 ms</td><td class="num">6,417 ms</td></tr>
+<tr><td><b>End-to-end: Pipeline 1 / Pipeline 2</b></td><td class="num" colspan="2"><b>3,054 / 3,075 ms</b></td></tr>
+</table>
+<p>Re-ranking makes retrieval about 4× slower on the GPU (+20.8 ms) and about 30× slower on the CPU (+201 ms). In absolute terms the GPU overhead is only
+0.7% of end-to-end time, because generation dominates, so here the accuracy gain costs almost nothing. On a CPU-only deployment, re-ranking would be a noticeable
+fraction of a second per query. Timings are from one laptop GPU after warm-up; GPU and CPU runs were timed in separate loops because interleaving them let the GPU clock down.</p>
+
+<h2>6. Scaling: why not cross-encode the whole collection from the start?</h2>
+<div class="row">
+<div style="flex:1.1">
+<p>Because the cross-encoder must see the query and the chunk together, its cost is <b>one forward pass per chunk, paid again for every new query</b>, and nothing
+can be indexed in advance. I measured it scoring 10, 25, 50 and all 92 chunks: the cost grows linearly, about <b>1.7 ms per chunk on GPU and 17 ms on CPU</b>.</p>
+<table>
+<tr><th>Corpus size</th><th class="num">CE on all, GPU</th><th class="num">CE on all, CPU</th><th class="num">Two-stage</th></tr>
+<tr><td>92 (this Act)</td><td class="num">0.16 s</td><td class="num">1.6 s</td><td class="num">~27 ms</td></tr>
+<tr><td>10,000</td><td class="num">17 s</td><td class="num">2.8 min</td><td class="num">~27 ms + ANN</td></tr>
+<tr><td>1,000,000</td><td class="num">29 min</td><td class="num">4.7 h</td><td class="num">~27 ms + ANN</td></tr>
+<tr><td>100,000,000</td><td class="num">2.0 days</td><td class="num">19.7 days</td><td class="num">~27 ms + ANN</td></tr>
+</table>
+</div>
+<div style="flex:0.9">
+<div class="fig"><img src="../artifacts/figures/ce_scaling.png" style="width:100%"></div>
+<p class="cap">Figure 2. Cross-encoder time grows linearly with the number of chunks scored (log scale).</p>
+</div>
+</div>
+<p>The bi-encoder moves almost all of its work to indexing time: chunk vectors are computed once, and an approximate nearest-neighbour index (HNSW/IVF)
+searches millions of them in milliseconds, so the two-stage pipeline always cross-encodes just ten candidates. On this tiny corpus, scoring all 92 chunks
+with the cross-encoder was actually more accurate (Hit@3 0.917 vs. 0.792), because it cannot miss a chunk the way the first stage did. That advantage
+cannot be bought at scale. The practical fix is to raise first-stage recall instead: a larger k (as shown with the top 30), or hybrid BM25 + dense retrieval
+for queries whose wording differs from the Act’s.</p>
+
+<h2>7. Conclusion and limitations</h2>
+<p>On 24 queries over the DPDP Act, cross-encoder re-ranking raised Hit@1 from 0.458 to 0.708, Hit@3 from 0.667 to 0.792 and MRR@10 from 0.589 to 0.743,
+at a cost of about 21 ms per query on a GPU. It helped most for negations and exceptions, where the bi-encoder ranks same-topic passages above the
+clause that decides the answer (N3, E6), and for keyword traps (K6). It could not help when the first stage missed the evidence (5 queries, including a
+hallucination in B5), and better retrieval did not always produce a better answer from a 3B generator (E6, K6, and five answer-level regressions).
+A retrieve-then-rerank design is the right architecture, but it should be paired with stronger first-stage recall and with answer-level checks for
+negations and exact numbers. Limitations: one document, 24 queries written and labelled by me, gold chunks and answer labels chosen by a single annotator,
+a small local generator, and latency measured on one machine.</p>
+
+</body>
+</html>
